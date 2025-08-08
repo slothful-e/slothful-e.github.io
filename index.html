@@ -1,11 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/common.css">
+    
+    <script defer src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script defer src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script defer src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script defer src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script defer src="./assets/js/common.js"></script>
+
 </head>
 <body>
-    hello world
+    <div class="wrap">
+        <header class="header">
+            <div class="logo">
+                <a href="./">&#127752;</a>
+                <h1 class="hidden">logo</h1>
+            </div>
+            <div class="email">
+                <a href="./">YOUR HEADLINE</a>
+            </div>
+            <div class="status">intro</div>
+        </header>
+        <div class="contents">
+            <section class="sec-intro">
+                <div class="center">
+                    <div class="boxs">
+                        <div class="box-page">
+                            <div class="piece-page page-wrap">
+                                <div class="page-top">
+                                    <p>palce your text</p>
+                                </div>
+                                <div class="page-title">
+                                    <h2>YOUR<br>HEADLINE</h2>
+                                    <span>place your text here</span>
+                                </div>
+                                <div class="page-content">
+                                    <p>내용내용</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-circular"><span class="piece-circular"></span></div>
+                        <div class="box-square"><span class="piece-square"></span></div>
+                        <div class="box-mini-circular-1"><span class="piece-circular"></span></div>
+                        <div class="box-mini-circular-2"><span class="piece-circular"></span></div>
+                        <!-- <div class="box-mini-circular-3"><span class="piece-circular"></span></div> -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="sec-about">
+                <div class="text-wrap">
+                    <h3 class="title">YOUR HEADLINE</h3>
+                    <div class="font-slide-wrap">
+                        <span class="font-slide" id="fontSlide" data-text="YOUR HEADLINE">YOUR HEADLINE</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer class="foorer">
+
+        </footer>
+    </div>
+
 </body>
 </html>

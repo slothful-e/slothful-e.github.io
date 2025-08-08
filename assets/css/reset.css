@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'MaruBuri';
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.eot);
+    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.woff2) format("woff2"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.ttf) format("truetype");
+}
+@font-face {
+    font-family: 'TTTogether';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/TTTogetherA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 900;
+    font-display: block;
+    src: local('Pretendard Black'), url('../fonts/Pretendard-Black.woff2') format('woff2');
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 700;
+    font-display: block;
+    src: local('Pretendard Bold'), url('../fonts/Pretendard-Bold.woff2') format('woff2');
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 600;
+    font-display: block;
+    src: local('Pretendard SemiBold'), url('../fonts/Pretendard-SemiBold.woff2') format('woff2');
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 500;
+    font-display: block;
+    src: local('Pretendard Medium'), url('../fonts/Pretendard-Medium.woff2') format('woff2');
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 400;
+    font-display: block;
+    src: local('Pretendard Regular'), url('../fonts/Pretendard-Regular.woff2') format('woff2');
+}
+
+/* reset */
+*, ::before, ::after {
+	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+	font: 400 14px/1.5  "Pretendard", "Noto Sans KR", "Malgun Gothic", sans-serif;
+	color: #333;
+	-webkit-text-size-adjust: none;
+}
+img, svg {
+    display: block;
+	max-width: 100%;
+    border: 0;
+}
+button {
+	border: 0;
+	background-color: transparent;
+    font: inherit;
+	cursor: pointer;
+    outline: none;
+}
+em,a {
+    font-style: normal;
+    color: inherit;
+}
+:focus {
+    outline: none;
+}
+strong{
+    font-weight: 700;
+}
+.hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    clip-path: polygon(0 0, 0 0, 0 0);
+}

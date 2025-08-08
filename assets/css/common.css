@@ -1,0 +1,309 @@
+:root {
+  --color-eee: #ededed;
+  --color-white: #fff;
+  --color-333: #333;
+  --color-point-pink: #f56a6a;
+  --intro-color-blue: #a0b6ff;
+  --intro-color-yellow: #fff4c6;
+  --intro-color-pink: #ffd0fa;
+  --intro-color-mint: #5cfff7;
+  --intro-border-style: 3px solid var(--color-333);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7803921569);
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  font-size: 18px;
+  z-index: 12;
+}
+.header .logo h1 {
+  font-size: inherit;
+}
+.header .email {
+  font-family: "TTTogether";
+  color: var(--color-point-pink);
+}
+.header.active {
+  transform: translateY(0);
+}
+.header.style {
+  margin: 40px 100px;
+  border-top: 3px solid;
+  border-bottom: 1px solid;
+  transition: all 0.3s;
+}
+
+.sec-intro {
+  position: relative;
+  height: 100vh;
+  background-color: var(--intro-color-blue);
+}
+.sec-intro [class*=box-] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.sec-intro [class*=box-]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.sec-intro [class*=piece-] {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: var(--intro-border-style);
+}
+.sec-intro .center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-52%, -52%);
+  width: 80%;
+  max-width: 940px;
+  height: calc(100vh - 400px);
+}
+.sec-intro .boxs {
+  position: relative;
+  height: 100%;
+}
+.sec-intro .box-page .piece-page {
+  background-color: var(--color-white);
+  z-index: 10;
+}
+.sec-intro .box-page::after {
+  top: 3%;
+  right: -4%;
+  border: var(--intro-border-style);
+  background-color: var(--intro-color-mint);
+  z-index: 9;
+}
+.sec-intro .box-circular {
+  top: -12%;
+  right: -25%;
+  width: 400px;
+  height: 400px;
+  animation: boxCircular 2s alternate infinite;
+}
+.sec-intro .box-circular .piece-circular {
+  border-radius: 50%;
+  z-index: 8;
+}
+.sec-intro .box-circular::after {
+  top: 10%;
+  right: -6%;
+  border-radius: 50%;
+  background-color: var(--intro-color-yellow);
+  z-index: 7;
+  animation: pieceCircular 2s alternate infinite;
+}
+.sec-intro .box-square {
+  transform: rotate(62deg);
+  top: 40%;
+  left: -16%;
+  width: 300px;
+  height: 300px;
+  animation: boxSquare 2s alternate infinite;
+}
+.sec-intro .box-square .piece-square {
+  z-index: 8;
+}
+.sec-intro .box-square::after {
+  top: 14%;
+  left: -12%;
+  background-color: var(--intro-color-pink);
+  z-index: 7;
+  animation: pieceSquare 2s alternate infinite;
+}
+.sec-intro .box-mini-circular-1 {
+  left: 0;
+  top: -9%;
+  width: 65px;
+  height: 65px;
+  animation: miniCircular1 4s alternate infinite;
+}
+.sec-intro .box-mini-circular-1 .piece-circular {
+  border-radius: 50%;
+  background-color: var(--intro-color-mint);
+  z-index: 8;
+}
+.sec-intro .box-mini-circular-1::after {
+  display: none;
+}
+.sec-intro .box-mini-circular-2 {
+  right: -10%;
+  bottom: 20%;
+  width: 65px;
+  height: 65px;
+  animation: miniCircular2 4s alternate infinite;
+}
+.sec-intro .box-mini-circular-2 .piece-circular {
+  border-radius: 50%;
+  background-color: var(--color-white);
+  z-index: 8;
+}
+.sec-intro .box-mini-circular-2::after {
+  top: -100%;
+  right: -92%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: var(--intro-border-style);
+  z-index: 7;
+  animation: miniCircular3 4s alternate infinite;
+}
+.sec-intro .box-mini-circular-3 {
+  transform: translateX(800%);
+  top: 56%;
+  width: 50px;
+  height: 50px;
+}
+.sec-intro .box-mini-circular-3 .piece-circular {
+  border-radius: 50%;
+  z-index: 8;
+}
+.sec-intro .box-mini-circular-3::after {
+  display: none;
+}
+.sec-intro .page-wrap {
+  padding: 40px;
+}
+.sec-intro .page-top {
+  margin-bottom: 60px;
+}
+.sec-intro .page-title h2 {
+  display: block;
+  font-family: "TTTogether";
+  font-size: 120px;
+  color: var(--color-point-pink);
+}
+.sec-intro .page-title span {
+  display: block;
+}
+.sec-about {
+  min-height: 5700px;
+  overflow: hidden;
+}
+.sec-about .text-wrap {
+  position: relative;
+  margin-top: 600px;
+}
+.sec-about .title {
+  text-align: center;
+  font-size: 100px;
+  font-family: "TTTogether";
+}
+.sec-about .font-slide {
+  display: inline-block;
+  font-family: "TTTogether";
+  white-space: nowrap;
+  font-size: 200px;
+  opacity: 0.05;
+  animation: slide-left 50s linear infinite;
+}
+.sec-about .font-slide-wrap {
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.sec-about .font-slide-wrap.fixed {
+  position: fixed;
+  top: 400px;
+  left: 0;
+  right: 0;
+}
+
+@keyframes boxCircular {
+  from {
+    top: -20%;
+  }
+  to {
+    top: -12%;
+  }
+}
+@keyframes pieceCircular {
+  from {
+    right: -10%;
+  }
+  to {
+    right: -6%;
+  }
+}
+@keyframes boxSquare {
+  from {
+    top: 50%;
+  }
+  to {
+    top: 40%;
+  }
+}
+@keyframes pieceSquare {
+  from {
+    left: -20%;
+  }
+  to {
+    left: -12%;
+  }
+}
+@keyframes miniCircular1 {
+  0% {
+    left: 0;
+    top: -9%;
+  }
+  50% {
+    left: -12%;
+    top: -17%;
+  }
+  100% {
+    left: -24%;
+    top: -9%;
+  }
+}
+@keyframes miniCircular2 {
+  0% {
+    right: -10%;
+    bottom: 20%;
+  }
+  50% {
+    right: -12%;
+    bottom: 8%;
+  }
+  100% {
+    right: -18%;
+    bottom: -2%;
+  }
+}
+@keyframes miniCircular3 {
+  0% {
+    top: -100%;
+    right: -92%;
+  }
+  50% {
+    top: -120%;
+    right: -140%;
+  }
+  100% {
+    top: -100%;
+    right: -80%;
+  }
+}
+@keyframes slide-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
