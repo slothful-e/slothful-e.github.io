@@ -1,23 +1,22 @@
 (function () {
     const header = document.querySelector('.header');
-    const pageTitle = document.querySelector('.page-title');
     const slide = document.getElementById('fontSlide');
     const slideWrap = document.querySelector('.font-slide-wrap');
     const secAbout = document.querySelector('.sec-about');
 
-    // 스크롤에 따라 header 및 font-slide-wrap 제어
+    const SCROLL_THRESHOLD = 10; // ✅ 이 값을 원하는 px로 조절
+
     function handleScroll() {
-        const titleRect = pageTitle.getBoundingClientRect();
+        const scrollY = window.scrollY || window.pageYOffset;
         const aboutRect = secAbout.getBoundingClientRect();
 
-        // 헤더 노출
-        if (titleRect.top <= 0) {
+        if (scrollY >= SCROLL_THRESHOLD) {
             header.classList.add('active');
         } else {
             header.classList.remove('active');
         }
 
-        // 슬라이드 고정
+        // 아래 코드는 기존 유지
         if (aboutRect.top <= 0) {
             header.classList.add('style');
             slideWrap.classList.add('fixed');
@@ -27,7 +26,6 @@
         }
     }
 
-    // 텍스트 자동 복제
     function fillSlideWithClones() {
         if (!slide || !slideWrap) return;
 
@@ -45,7 +43,7 @@
 
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('DOMContentLoaded', () => {
-        handleScroll();
+        handleScroll(); // 페이지 로드 시 바로 상태 반영
         fillSlideWithClones();
     });
     window.addEventListener('resize', fillSlideWithClones);
