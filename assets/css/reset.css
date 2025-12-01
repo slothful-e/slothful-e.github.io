@@ -1,20 +1,4 @@
-@font-face {
-    font-family: 'MaruBuri';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.woff2) format("woff2"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.ttf) format("truetype");
-}
-@font-face {
-    font-family: 'TTTogether';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/TTTogetherA.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: "Pretendard";
-    font-weight: 900;
-    font-display: block;
-    src: local('Pretendard Black'), url('../fonts/Pretendard-Black.woff2') format('woff2');
-}
+
 @font-face {
     font-family: "Pretendard";
     font-weight: 700;
@@ -40,11 +24,26 @@
     src: local('Pretendard Regular'), url('../fonts/Pretendard-Regular.woff2') format('woff2');
 }
 
+:root {
+    --color-white: #ffffff;
+    --color-background: #f4f4f4;
+    --color-eee: #eeeeee;
+    --color-333: #333333;
+    --color-black: #000000;
+    --color-signature: #ecf95a;
+    --color-pink: #f9aaaa;
+    --color-mint: #32d3ae;
+    --border-radius: 18px;
+    --font-family: 400 16px/1.8  "Pretendard", sans-serif;
+}
+
+
 /* reset */
 *, ::before, ::after {
 	box-sizing: border-box;
     margin: 0;
     padding: 0;
+    word-break: keep-all;
 }
 html {
     -webkit-touch-callout: none;
@@ -52,7 +51,7 @@ html {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-	font: 400 14px/1.5  "Pretendard", "Noto Sans KR", "Malgun Gothic", sans-serif;
+	font: var(--font-family);
 	color: #333;
 	-webkit-text-size-adjust: none;
 }
@@ -62,15 +61,21 @@ img, svg {
     border: 0;
 }
 button {
-	border: 0;
+	border: none;
+    outline: none;
 	background-color: transparent;
     font: inherit;
 	cursor: pointer;
-    outline: none;
+}
+ul,li,ol{
+    list-style-type: none;
 }
 em,a {
-    font-style: normal;
+    text-decoration: none;
+    font: var(--font-family);
     color: inherit;
+    word-break: keep-all;
+	cursor:pointer;
 }
 :focus {
     outline: none;
@@ -88,4 +93,14 @@ strong{
     border: 0;
     white-space: nowrap;
     clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+@media (max-width: 1024px){
+    html {
+        font-size : 62.5%;
+    }
+    body {
+        font-size: 1.4rem;
+        line-height: 1.6;
+    }
 }

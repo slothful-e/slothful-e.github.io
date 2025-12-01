@@ -1,71 +1,512 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/assets/css/reset.css">
-    <link rel="stylesheet" href="/assets/css/common.css">
-    
-    <script defer src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script defer src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-    <script defer src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <script defer src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-    <script defer src="./assets/js/common.js"></script>
-
+    <title>𐂂 Introduction</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
 </head>
+
 <body>
     <div class="wrap">
-        <header class="header">
-            <div class="logo">
-                <a href="./">&#127752;</a>
-                <h1 class="hidden">logo</h1>
+        <!-- HEADER -->
+        <header>
+            <div class="inner">
+                <div class="header-fixed">
+                    <a href="#hero" class="nav logo active">
+                        <h1><span class="symbol">𐂂</span> Int<span class="text">roduction</span></h1>
+                    </a>
+                    <button type="button" class="mobile-menu-btn">
+                        <div><span>&nbsp;</span></div>
+                    </button>
+                    <nav>
+                        <a class="nav" href="#section-career">MY Career</a>
+                        <a class="nav" href="#section-work">Work Experience</a>
+                        <a class="nav" href="#section-certificate">Certificate</a>
+                        <a class="nav" href="#section-skills">Skills</a>
+                        <a class="nav" href="#section-style">Style Guide</a>
+                        <a class="nav" href="#section-about">About Me</a>
+                    </nav>
+                </div>
+                <a href="https://webs-kilgaae.github.io/Introduction/" class="btn-move">🌈 <span>Move v.2023</span></a>
             </div>
-            <div class="email">
-                <a href="./">YOUR HEADLINE</a>
-            </div>
-            <div class="status">intro</div>
         </header>
-        <div class="contents">
-            <section class="sec-intro">
-                <div class="center">
-                    <div class="boxs">
-                        <div class="box-page">
-                            <div class="piece-page page-wrap">
-                                <div class="page-top">
-                                    <p>palce your text</p>
+
+        <!-- CONTAINER -->
+        <div class="container">
+
+            <div class="content">
+                <div class="main-page">
+                    <div class="inner">
+                        <!-- HERO SECTION -->
+                        <section class="hero" id="hero">
+                            <div class="boxs">
+                                <div class="box left">
+                                    <h2><strong>WEB PUBLISHER</strong> 길가애입니다.</h2>
+                                    <p class="title-sub">
+                                        웹 퍼블리셔로서 플랫폼의 상호작용을 최적화하고, 사용자가 필요한 정보를 가장 명확하게
+                                        받아들일 수 있도록 구조와 흐름을 설계합니다. <br>
+                                        디자인과 개발의 경계를 자연스럽게 이어주는 역할을 통해,<br>
+                                        팀과 고객의 요구를 정확히 이해하고 이를 화면 위에서 구현 가능한 형태로 번역합니다.<br>
+                                        더 나은 사용자 경험을 만들기 위해 디테일을 탐구하며,<br>
+                                        완성도 높은 컨텐츠와 웹 인터페이스를 제작하는 데 집중하고 있습니다.
+                                    </p>
                                 </div>
-                                <div class="page-title">
-                                    <h2>YOUR<br>HEADLINE</h2>
-                                    <span>place your text here</span>
+                                <div class="box right">
+                                    <ul class="rolling-list">
+                                        <li class="active">
+                                            <div class="img"><span>💻</span></div>
+                                            <div class="text">
+                                                <strong>웹 퍼블리셔</strong>
+                                                <p>표준 기반의 반응형 웹 구축 경험 보유</p>
+                                            </div>
+                                        </li>
+                                        <li class="active">
+                                            <div class="img"><span>🎨</span></div>
+                                            <div class="text">
+                                                <strong>UI 구현</strong>
+                                                <p>디자인 시안을 웹 인터페이스로 빠르게 구현</p>
+                                            </div>
+                                        </li>
+                                        <li class="active">
+                                            <div class="img"><span>⚡</span></div>
+                                            <div class="text">
+                                                <strong>Front-End</strong>
+                                                <p>HTML, CSS, JavaScript 기반 기능 구현</p>
+                                            </div>
+                                        </li>
+                                        <li class="active">
+                                            <div class="img"><span>💻</span></div>
+                                            <div class="text">
+                                                <strong>웹 퍼블리셔</strong>
+                                                <p>표준 기반의 반응형 웹 구축 경험 보유</p>
+                                            </div>
+                                        </li>
+                                        <li class="active">
+                                            <div class="img"><span>🎨</span></div>
+                                            <div class="text">
+                                                <strong>UI 구현</strong>
+                                                <p>디자인 시안을 웹 인터페이스로 빠르게 구현</p>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="page-content">
-                                    <p>내용내용</p>
+                                <div class="circle-wrap">
+                                    <div class="circle">
+                                        <svg viewBox="0 0 300 300">
+                                            <defs>
+                                                <path id="circlePath"
+                                                    d="M150,150 m-120,0 a120,120 0 1,1 240,0 a120,120 0 1,1 -240,0" />
+                                            </defs>
+                                            <text x="150" y="150" class="arrow">↓</text>
+                                            <g class="rotating-text">
+                                                <text>
+                                                    <textPath href="#circlePath" startOffset="0">
+                                                        • Please scroll down! • Please scroll down! • Please scroll
+                                                        down!
+                                                    </textPath>
+                                                </text>
+                                            </g>
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="box-circular"><span class="piece-circular"></span></div>
-                        <div class="box-square"><span class="piece-square"></span></div>
-                        <div class="box-mini-circular-1"><span class="piece-circular"></span></div>
-                        <div class="box-mini-circular-2"><span class="piece-circular"></span></div>
-                        <!-- <div class="box-mini-circular-3"><span class="piece-circular"></span></div> -->
-                    </div>
-                </div>
-            </section>
+                        </section>
 
-            <section class="sec-about">
-                <div class="text-wrap">
-                    <h3 class="title">YOUR HEADLINE</h3>
-                    <div class="font-slide-wrap">
-                        <span class="font-slide" id="fontSlide" data-text="YOUR HEADLINE">YOUR HEADLINE</span>
+                        <!-- CAREER SECTION -->
+                        <section class="section-career" id="section-career">
+                            <div class="section-top">
+                                <span class="chip">Who I Am</span>
+                                <h3>MY Career</h3>
+                                <p class="text-box">
+                                    웹 퍼블리셔로서 다양한 웹 프로젝트에 참여하며 실무 경험과 문제 해결 능력을 쌓아 왔습니다. 처음 웹을 접했을 때부터 사용자가 편리하게 이용할 수 있는
+                                    화면을
+                                    만드는
+                                    일에
+                                    매력을 느꼈고, 이를 실현하기 위해 웹 표준과 접근성을 기반으로 견고한 마크업 구조를 꾸준히 연습했습니다.
+                                </p>
+                                <p class="text-box">
+                                    프로젝트를 진행하면서 단순히 화면을 만드는 것을 넘어 ‘사용자가 어떻게 느끼고 어떤 동선을 거칠지’를 항상 고려하여 UI를 구현했습니다. 디자이너와
+                                    협업하며
+                                    요구사항을
+                                    조율하고, 반응형 환경과 브라우저 호환성을 고려한 코드를 작성하는 것을 원칙으로 삼았습니다.
+                                </p>
+                                <p class="text-box">
+                                    또한 새로운 기술을 빠르게 습득하고 실무에 적용하며 팀 전체의 효율을 높이는 퍼블리셔가 되기 위해 노력하고 있습니다. 앞으로도 기술 트렌드 변화에
+                                    능동적으로
+                                    대응하며,
+                                    사용자 중심의 웹을 구현하는 데 필요한 역량을 지속적으로 성장시켜 나가고자 합니다.
+                                </p>
+                            </div>
+                        </section>
+
+                        <!-- WORK EXPERIENCE SECTION -->
+                        <section class="section-work" id="section-work">
+                            <div class="section-top">
+                                <!-- <span class="chip">What I Do</span> -->
+                                <span class="chip">Who I Am</span>
+                                <h3>Work Experience</h3>
+                                <strong class="total">총 경력 4년 8개월</strong>
+                                <ul class="work-list">
+                                    <li>
+                                        <strong>(주)DK BMC</strong>
+                                        <p>
+                                            웹 퍼블리셔 / 대리<br>
+                                            2023년 3월 ~ 2025년 11월 (2년 9개월)
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <strong>(주)하이웹솔루션</strong>
+                                        <p>
+                                            웹 퍼블리셔 / 주임<br>
+                                            2021년 4월 ~ 2023년 2월 (1년 11개월)
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="work-box">
+                                <ul class="scroll">
+                                    <li class="boxs">
+                                        <a href="./pages/2025-wackywilly.html" class="box img-wrap">
+                                            <img src="./assets/images/wackywilly/wackywilly1.png"
+                                                alt="프로젝트 상세보기 페이지로 이동">
+                                        </a>
+                                        <div class="box text-wrap">
+                                            <span class="chip mint">DK BMC</span>
+                                            <div class="title-wrap">
+                                                <h4>와키윌리</h4>
+                                                <span>2025.10.20 - 2025.11.28</span>
+                                            </div>
+                                            <ul class="dash">
+                                                <li>pc, 모바일 반응형 구축 사이트</li>
+                                                <li>2월 선오픈을 위한 부분페이지 작업</li>
+                                                <li>gulp 환경에서 작업</li>
+                                                <li>GitHub 버전 관리 및 배포 구조 정리</li>
+                                                <li>기여도 100%</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li class="boxs">
+                                        <div class="box text-wrap">
+                                            <span class="chip mint">DK BMC</span>
+                                            <div class="title-wrap">
+                                                <h4>NNN</h4>
+                                                <span>2025.9.1 - 2025.10.31</span>
+                                            </div>
+                                            <ul class="dash">
+                                                <li>pc, 모바일 반응형 구축 사이트</li>
+                                                <li>gulp 환경에서 작업</li>
+                                                <li>html/scss/JavaScript</li>
+                                                <li>기여도 50%</li>
+                                            </ul>
+                                        </div>
+                                        <a href="./pages/2025-nnn.html" class="box img-wrap">
+                                            <img src="./assets/images/nnn/nnn1.png" alt="프로젝트 상세보기 페이지로 이동">
+                                        </a>
+                                    </li>
+
+                                    <li class="boxs">
+                                        <a href="./pages/2025-quiz.html" class="box img-wrap">
+                                            <img src="./assets/images/quiz/quiz1.png" alt="프로젝트 상세보기 페이지로 이동">
+                                        </a>
+                                        <div class="box text-wrap">
+                                            <span class="chip mint">DK BMC</span>
+                                            <div class="title-wrap">
+                                                <h4>New OX 퀴즈</h4>
+                                                <span>2025.7.21 - 2025.7.25</span>
+                                            </div>
+                                            <ul class="dash">
+                                                <li>사내 퀴즈 페이지</li>
+                                                <li>pc page</li>
+                                                <li>html/scss/JavaScript</li>
+                                                <li>기여도 100%</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li class="boxs">
+                                        <div class="box text-wrap">
+                                            <span class="chip mint">DK BMC</span>
+                                            <div class="title-wrap">
+                                                <h4>페어라이어</h4>
+                                                <span>2025.4.20 - 2025.11.28</span>
+                                            </div>
+                                            <ul class="dash">
+                                                <li>pc, 모바일 반응형 구축 사이트</li>
+                                                <li>gulp 환경에서 작업</li>
+                                                <li>html/scss/JavaScript</li>
+                                                <li>기여도 70%</li>
+                                            </ul>
+                                        </div>
+                                        <a href="./pages/2025-fairliar.html" class="box img-wrap">
+                                            <img src="./assets/images/fairliar/fairliar1.png" alt="프로젝트 상세보기 페이지로 이동">
+                                        </a>
+                                    </li>
+
+                                    <li class="boxs">
+                                        <div class="box img-wrap"></div>
+                                        <div class="box text-wrap">
+                                            <span class="chip mint">DK BMC</span>
+                                            <div class="title-wrap">
+                                                <h4>LG CNS B2B 파트너포탈 프로젝트</h4>
+                                                <span>2024.7.22 - 2025.9월 중순</span>
+                                            </div>
+
+                                            <p class="box-text">LG CNS로 파견되어 기업 고객 및 파트너사를 위한 B2B 파트너포탈 구축·고도화 프로젝트에 참여
+                                            </p>
+
+                                            <ul class="dash">
+                                                <li>포털 주요 화면 퍼블리싱
+                                                    <p>파트너 관리, 계약/지원 요청, 제품 정보 조회, 업무 알림 등 주요 기능 페이지의 UI 마크업 작업 수행하였습니다
+                                                    </p>
+                                                </li>
+                                                <li>반응형 UI 구축
+                                                    <p>PC 중심의 기존 화면을 다양한 환경에서도 사용 가능하도록 반응형·적응형 레이아웃 적용했습니다.</p>
+                                                </li>
+                                                <li>기여도 100%</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li class="boxs">
+                                        <div class="box text-wrap">
+                                            <span class="chip mint">DK BMC</span>
+                                            <div class="title-wrap">
+                                                <h4>LG CNS 상담필드 모바일</h4>
+                                                <span>2024.4.29 - 2024.5.28</span>
+                                            </div>
+
+                                            <p class="box-text">LG CNS로 파견되어 상담원 현장 업무(상담필드)의 모바일 환경 개선 프로젝트에 참여</p>
+
+                                            <ul class="dash">
+                                                <li>Salesforce 환경에서 Visualforce 기반 모바일 상담 시스템 UI 유지보수 작업을 진행하였습니다.
+                                                </li>
+                                                <li>
+                                                    Visualforce 페이지 구조에 맞춘 퍼블리싱과 상담 프로세스에 필요한 UI/UX 개선을 수행하였습니다.
+                                                </li>
+                                                <li>기여도 100%</li>
+                                            </ul>
+                                        </div>
+                                        <div class="box img-wrap"></div>
+                                    </li>
+
+                                    <li class="boxs">
+                                        <a href="./pages/2023-nexen.html" class="box img-wrap">
+                                            <img src="./assets/images/nexen/nexen1.png" alt="프로젝트 상세보기 페이지로 이동">
+                                        </a>
+                                        <div class="box text-wrap">
+                                            <span class="chip mint">DK BMC</span>
+                                            <div class="title-wrap">
+                                                <h4>넥센타이어 디지털 CRM 1단계 구축</h4>
+                                                <span>2023.11.6 - 2024.2.21</span>
+                                            </div>
+                                            <ul class="dash">
+                                                <li>파견 프로젝트</li>
+                                                <li>pc, 모바일 반응형 구축 사이트</li>
+                                                <li>gulp 환경에서 작업</li>
+                                                <li>html/scss/JavaScript</li>
+                                                <li>기여도 100%</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li class="boxs">
+                                        <div class="box text-wrap">
+                                            <span class="chip mint">DK BMC</span>
+                                            <div class="title-wrap">
+                                                <h4>SK VIEW 모바일 고도화</h4>
+                                                <span>2023.5.8 - 2023.6.19</span>
+                                            </div>
+                                            <p class="box-text">
+                                                SK VIEW 아파트 브랜드 웹사이트의 모바일 환경을 개선하는 모바일 고도화 프로젝트
+                                            </p>
+                                            <p class="box-text">
+                                                기존 모바일 페이지의 UI·UX 사용성을 높이고, 퍼포먼스 개선과 유지보수성을 강화하는 것이 핵심 목표였습니다.
+                                            </p>
+
+                                            <ul class="dash">
+                                                <li>모바일 UI 개편
+                                                    <p> 주요 페이지의 반응형 구조를 재정비하고, 모바일 친화적인 레이아웃 및 컴포넌트를 재구성</p>
+                                                </li>
+                                                <li>신규페이지 추가 : 16page</li>
+                                                <li>기여도 100%</li>
+                                            </ul>
+                                        </div>
+                                        <div class="box img-wrap"></div>
+                                    </li>
+
+                                    <li class="boxs">
+                                        <a href="./pages/2023-reservation.html" class="box img-wrap">
+                                            <img src="./assets/images/reservation/page2.png" alt="프로젝트 상세보기 페이지로 이동">
+                                        </a>
+                                        <div class="box text-wrap">
+                                            <span class="chip mint">DK BMC</span>
+                                            <div class="title-wrap">
+                                                <h4>모바일 좌석 예약제</h4>
+                                                <span>2023.3 - 2023.4</span>
+                                            </div>
+                                            <ul class="dash">
+                                                <li>사내 직원들이 사용하는 좌석예약제 사이트</li>
+                                                <li>pc, 모바일 적응형</li>
+                                                <li>html/scss/jQuery</li>
+                                                <li>기여도 100%</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li class="boxs">
+                                        <div class="box text-wrap">
+                                            <span class="chip mint">DK BMC</span>
+                                            <div class="title-wrap">
+                                                <h4>DKBMC QnA</h4>
+                                                <span>2023.3 - 2023.4</span>
+                                            </div>
+                                            <ul class="dash">
+                                                <li>디케이비엠씨 사내 QnA 사이트</li>
+                                                <li>pc, 모바일 적응형</li>
+                                                <li>html/scss/jQuery</li>
+                                                <li>기여도 100%</li>
+                                            </ul>
+                                        </div>
+                                        <a href="./pages/2023-qna.html" class="box img-wrap">
+                                            <img src="./assets/images/qna/qna1.png" alt="프로젝트 상세보기 페이지로 이동">
+                                        </a>
+                                    </li>
+
+                                    <li class="button-wrap">
+                                        <a href="https://webs-kilgaae.github.io/Introduction/" class="btn-move">🌈 Move
+                                            v.2023</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- CERTIFICATE SECTION -->
+                        <section class="section-certificate" id="section-certificate">
+                            <div class="section-top">
+                                <span class="chip">Who I Am</span>
+                                <h3>Certificate</h3>
+                                <ul>
+                                    <li>2021.03 - 2026.01
+                                        <p>한국방송통신대학교 컴퓨터과학과</p>
+                                    </li>
+                                    <li>2020.02 - 2020.07
+                                        <p>디지털디자인 웹디자인/웹퍼블리셔(반응형ul/ux디자인) 양성과정</p>
+                                    </li>
+                                    <li>2014.03 - 2016.01
+                                        <p>경희사이버대학교 문화예술경영학과</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- SKILLS SECTION -->
+                        <section class="section-skills" id="section-skills" style="display: none">
+                            <div class="section-top">
+                                <span class="chip">Who I Am</span>
+                                <h3>Introduction & Skills</h3>
+                                <p>배움을 실전에 연결하며 웹 표준과 사용자 경험을 중심으로 꾸준히 성장하고 있습니다.</p>
+                            </div>
+                            <ul class="boxs">
+                                <li class="box">
+                                    <span class="ico"></span>
+                                    <h4>행동력</h4>
+                                    <p>배운 것을 즉시 실무에 적용하며, 경험을 통해 꾸준히 성장하고 있습니다.</p>
+                                </li>
+                                <li class="box">
+                                    <span class="ico"></span>
+                                    <h4>직무</h4>
+                                    <p>사용자 경험 중심의 정확한 마크업과 효율적인 UI 구현을 목표로 삼습니다.</p>
+                                    <ul class="tags">
+                                        <li>Web publisher</li>
+                                    </ul>
+                                </li>
+                                <li class="box">
+                                    <span class="ico"></span>
+                                    <h4>기술</h4>
+                                    <p>효율적인 코딩과 유지보수 용이한 구조를 위해 지속적으로 기술 역량을 확장하고 있습니다.</p>
+                                    <ul class="tags">
+                                        <li>Html</li>
+                                        <li>Css</li>
+                                        <li>Scss</li>
+                                        <li>JQuery</li>
+                                        <li>Javascript</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <!-- STYLE GUIDE & ABOUT ME -->
+                        <section class="section-style" id="section-style">
+                            <div class="section-top">
+                                <span class="chip">Who I Am</span>
+                                <h3>Style Guide</h3>
+                            </div>
+                        </section>
+
+                        <section class="section-about" id="section-about">
+                            <div class="section-top">
+                                <span class="chip">Who I Am</span>
+                                <h3>About Me</h3>
+                                <p>
+                                    ✉ gabory_@naver.com<br>
+                                </p>
+                            </div>
+                        </section>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
-        <footer class="foorer">
 
-        </footer>
+        <!-- FOOTER -->
+        <footer class="footer"></footer>
+
     </div>
-
 </body>
+
 </html>
+
+<!-- <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuLinks = document.querySelectorAll(".nav");
+        const sections = [...menuLinks].map(link => {
+            const id = link.getAttribute("href");
+            return document.querySelector(id);
+        });
+
+        // 스무스 스크롤
+        menuLinks.forEach(link => {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                const target = document.querySelector(this.getAttribute("href"));
+                const top = target.offsetTop;
+
+                window.scrollTo({
+                    top: top,
+                    behavior: "smooth"
+                });
+            });
+        });
+
+        // 스크롤 스파이 (현재 보고 있는 섹션 메뉴 활성화)
+        window.addEventListener("scroll", () => {
+            let scrollPos = window.pageYOffset + 200; // 조금 여유 잡기
+
+            sections.forEach((sec, index) => {
+                const secTop = sec.offsetTop;
+                const secBottom = secTop + sec.offsetHeight;
+
+                if (scrollPos >= secTop && scrollPos < secBottom) {
+                    menuLinks.forEach(a => a.classList.remove("active"));
+                    menuLinks[index].classList.add("active");
+                }
+            });
+        });
+    });
+</script> -->
+
+<script src="./assets/js/ui.js"></script>
