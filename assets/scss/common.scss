@@ -101,13 +101,18 @@ header {
     }
     nav{
         position: absolute;
-        top: 36%;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
-        width: 660px;
+        transform: translate(-50%,-50%);
+        display: flex;
+        gap: 10px;
+        .nav{
+            flex-shrink: 0;
+        }
         a {
             position: relative;
             display: inline-block;
+            padding: 2px 15px;
             font-size: 18px;
             font-weight: 500;
             &:not(:first-child){
@@ -116,18 +121,23 @@ header {
             &::before{
                 content: "";
                 position: absolute;
-                bottom: -8px;
+                left: 8px;
+                bottom: -2px;
                 width: 0;
                 height: 3px;
                 border-radius: 10px;
                 background-color: transparent;
                 transition: all .3s;
             }
-            &:hover,&.active{
+            &.active{
                 &::before{
-                    width: 100%;
+                    width: calc(100% - 16px);
                     background-color: var(--color-pink);
                 }
+            }
+            &:hover{
+                border-radius: 10px;
+                background-color: #f9aaaa45;
             }
         }
     }
@@ -280,6 +290,7 @@ header {
                 }
             }
             &.right{
+                padding: 0 40px;
                 background-color: var(--color-signature);
                 &::after,&::before{
                     border-bottom-left-radius: var(--border-radius);
@@ -295,8 +306,8 @@ header {
                 }
                 .rolling-list{
                     position: relative;
-                    height: 370px;
-                    padding: 100px 0 0 70px;
+                    height: 350px;
+                    padding: 80px 0 0 70px;
                     overflow: hidden;
                     z-index: 3;
                     li{
@@ -582,27 +593,25 @@ header {
         }
         .header-fixed{
             min-height: 6rem;
+            width: calc(100vw - 3.2rem);
         }
         nav{
             display: none;
-            width: 17.4rem;
+            flex-direction: column;
+            width: 20rem;
             padding: 2rem;
             top: 6rem;
             left: -2rem;
             transform: unset;
             background-color: #f4f4f4cc;
             a{
-                display: block;
                 font-size: 1.6rem;
                 &:not(:first-child){
                     margin: 1.4rem 0 0;
                 }
-                &::before{
-                    bottom: -2px;
-                }
             }
             &.active{
-                display: block;
+                display: flex;
             }
         } 
         .mobile-menu-btn{
@@ -615,7 +624,7 @@ header {
                 gap: .4rem;
                 width: 4rem;
                 height: 4rem;
-                border-radius: 12px;
+                border-radius: 8px;
                 border: 1px solid var(--color-pink);
                 &::after,&::before{
                     content: "";
@@ -627,6 +636,25 @@ header {
                     height: 2px;
                     border-radius: 1rem;
                     background-color: var(--color-pink);
+                    transition: all .3s;
+                }
+            }
+            &.active{
+                div{
+                    span{
+                        display: none;
+                    }
+                    &::after,&::before{
+                        width: 2.6rem;
+                    }
+                    &::after{
+                        transform: rotate(45deg);
+                        top: -2px;
+                    }
+                    &::before{
+                        transform: rotate(315deg);
+                        top: 3px;
+                    }
                 }
             }
         }
@@ -689,10 +717,13 @@ header {
             .box{
                 min-height: auto;
                 padding: 2rem;
-                &.right .rolling-list{
-                    height: 27rem;
-                    width: 100%;
-                    padding: 0;
+                &.right{
+                    padding: 2rem;
+                    .rolling-list{
+                        height: 27rem;
+                        width: 100%;
+                        padding: 0;
+                    }
                 }
                 &.left{
                     width: calc(100% - 16rem);
@@ -709,14 +740,16 @@ header {
         .section-work{
             .work-box{
                 width: 100%;
-                margin: 0;
+                margin: 2rem 0 0;
+                padding: 2rem;
+                background-color: var(--color-background);
             }
             .boxs{
                 gap: 0;
                 padding-top: 5rem;
             }
             .scroll{
-                max-height: 40rem;
+                max-height: 50rem;
                 padding: 4rem 0 0;
             }
             .button-wrap{

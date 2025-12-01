@@ -22,12 +22,12 @@
                         <div><span>&nbsp;</span></div>
                     </button>
                     <nav>
-                        <a class="nav" href="#section-career">MY Career</a>
-                        <a class="nav" href="#section-work">Work Experience</a>
-                        <a class="nav" href="#section-certificate">Certificate</a>
-                        <a class="nav" href="#section-skills">Skills</a>
-                        <a class="nav" href="#section-style">Style Guide</a>
-                        <a class="nav" href="#section-about">About Me</a>
+                        <div class="nav"><a href="#section-career">MY Career</a></div>
+                        <div class="nav"><a href="#section-work">Work Experience</a></div>
+                        <div class="nav"><a href="#section-certificate">Certificate</a></div>
+                        <div class="nav"><a href="#section-skills">Skills</a></div>
+                        <!-- <div><a class="nav" href="#section-style">Style Guide</a></div> -->
+                        <div class="nav"><a href="#section-about">About Me</a></div>
                     </nav>
                 </div>
                 <a href="https://webs-kilgaae.github.io/Introduction/" class="btn-move">🌈 <span>Move v.2023</span></a>
@@ -36,7 +36,6 @@
 
         <!-- CONTAINER -->
         <div class="container">
-
             <div class="content">
                 <div class="main-page">
                     <div class="inner">
@@ -440,20 +439,18 @@
                         </section>
 
                         <!-- STYLE GUIDE & ABOUT ME -->
-                        <section class="section-style" id="section-style">
+                        <!-- <section class="section-style" id="section-style">
                             <div class="section-top">
                                 <span class="chip">Who I Am</span>
                                 <h3>Style Guide</h3>
                             </div>
-                        </section>
+                        </section> -->
 
                         <section class="section-about" id="section-about">
                             <div class="section-top">
                                 <span class="chip">Who I Am</span>
                                 <h3>About Me</h3>
-                                <p>
-                                    ✉ gabory_@naver.com<br>
-                                </p>
+                                <p> ✉ gabory_@naver.com</p>
                             </div>
                         </section>
                     </div>
@@ -468,45 +465,4 @@
 </body>
 
 </html>
-
-<!-- <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const menuLinks = document.querySelectorAll(".nav");
-        const sections = [...menuLinks].map(link => {
-            const id = link.getAttribute("href");
-            return document.querySelector(id);
-        });
-
-        // 스무스 스크롤
-        menuLinks.forEach(link => {
-            link.addEventListener("click", function (e) {
-                e.preventDefault();
-
-                const target = document.querySelector(this.getAttribute("href"));
-                const top = target.offsetTop;
-
-                window.scrollTo({
-                    top: top,
-                    behavior: "smooth"
-                });
-            });
-        });
-
-        // 스크롤 스파이 (현재 보고 있는 섹션 메뉴 활성화)
-        window.addEventListener("scroll", () => {
-            let scrollPos = window.pageYOffset + 200; // 조금 여유 잡기
-
-            sections.forEach((sec, index) => {
-                const secTop = sec.offsetTop;
-                const secBottom = secTop + sec.offsetHeight;
-
-                if (scrollPos >= secTop && scrollPos < secBottom) {
-                    menuLinks.forEach(a => a.classList.remove("active"));
-                    menuLinks[index].classList.add("active");
-                }
-            });
-        });
-    });
-</script> -->
-
 <script src="./assets/js/ui.js"></script>

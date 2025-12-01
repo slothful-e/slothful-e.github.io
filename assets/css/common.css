@@ -105,14 +105,19 @@ header .header-fixed {
 }
 header nav {
   position: absolute;
-  top: 36%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 660px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
+}
+header nav .nav {
+  flex-shrink: 0;
 }
 header nav a {
   position: relative;
   display: inline-block;
+  padding: 2px 15px;
   font-size: 18px;
   font-weight: 500;
 }
@@ -122,16 +127,21 @@ header nav a:not(:first-child) {
 header nav a::before {
   content: "";
   position: absolute;
-  bottom: -8px;
+  left: 8px;
+  bottom: -2px;
   width: 0;
   height: 3px;
   border-radius: 10px;
   background-color: transparent;
   transition: all 0.3s;
 }
-header nav a:hover::before, header nav a.active::before {
-  width: 100%;
+header nav a.active::before {
+  width: calc(100% - 16px);
   background-color: var(--color-pink);
+}
+header nav a:hover {
+  border-radius: 10px;
+  background-color: rgba(249, 170, 170, 0.2705882353);
 }
 header .btn-move {
   position: absolute;
@@ -272,6 +282,7 @@ header .mobile-menu-btn {
   bottom: 0;
 }
 .main-page .hero .box.right {
+  padding: 0 40px;
   background-color: var(--color-signature);
 }
 .main-page .hero .box.right::after, .main-page .hero .box.right::before {
@@ -288,8 +299,8 @@ header .mobile-menu-btn {
 }
 .main-page .hero .box.right .rolling-list {
   position: relative;
-  height: 370px;
-  padding: 100px 0 0 70px;
+  height: 350px;
+  padding: 80px 0 0 70px;
   overflow: hidden;
   z-index: 3;
 }
@@ -584,10 +595,12 @@ header .mobile-menu-btn {
   }
   header .header-fixed {
     min-height: 6rem;
+    width: calc(100vw - 3.2rem);
   }
   header nav {
     display: none;
-    width: 17.4rem;
+    flex-direction: column;
+    width: 20rem;
     padding: 2rem;
     top: 6rem;
     left: -2rem;
@@ -595,17 +608,13 @@ header .mobile-menu-btn {
     background-color: rgba(244, 244, 244, 0.8);
   }
   header nav a {
-    display: block;
     font-size: 1.6rem;
   }
   header nav a:not(:first-child) {
     margin: 1.4rem 0 0;
   }
-  header nav a::before {
-    bottom: -2px;
-  }
   header nav.active {
-    display: block;
+    display: flex;
   }
   header .mobile-menu-btn {
     display: block;
@@ -618,7 +627,7 @@ header .mobile-menu-btn {
     gap: 0.4rem;
     width: 4rem;
     height: 4rem;
-    border-radius: 12px;
+    border-radius: 8px;
     border: 1px solid var(--color-pink);
   }
   header .mobile-menu-btn div::after, header .mobile-menu-btn div::before {
@@ -631,6 +640,21 @@ header .mobile-menu-btn {
     height: 2px;
     border-radius: 1rem;
     background-color: var(--color-pink);
+    transition: all 0.3s;
+  }
+  header .mobile-menu-btn.active div span {
+    display: none;
+  }
+  header .mobile-menu-btn.active div::after, header .mobile-menu-btn.active div::before {
+    width: 2.6rem;
+  }
+  header .mobile-menu-btn.active div::after {
+    transform: rotate(45deg);
+    top: -2px;
+  }
+  header .mobile-menu-btn.active div::before {
+    transform: rotate(315deg);
+    top: 3px;
   }
   .main-page section:not(:first-child) {
     margin-top: 2rem;
@@ -687,6 +711,9 @@ header .mobile-menu-btn {
     min-height: auto;
     padding: 2rem;
   }
+  .main-page .hero .box.right {
+    padding: 2rem;
+  }
   .main-page .hero .box.right .rolling-list {
     height: 27rem;
     width: 100%;
@@ -704,14 +731,16 @@ header .mobile-menu-btn {
   }
   .main-page .section-work .work-box {
     width: 100%;
-    margin: 0;
+    margin: 2rem 0 0;
+    padding: 2rem;
+    background-color: var(--color-background);
   }
   .main-page .section-work .boxs {
     gap: 0;
     padding-top: 5rem;
   }
   .main-page .section-work .scroll {
-    max-height: 40rem;
+    max-height: 50rem;
     padding: 4rem 0 0;
   }
   .main-page .section-work .button-wrap {

@@ -60,7 +60,8 @@
      * Smooth Scroll + Scroll Spy
      * ----------------------------------------------------- */
     const initScrollSpy = () => {
-        const menuLinks = document.querySelectorAll(".nav");
+        // ⬇ div.nav > a 를 잡는다.
+        const menuLinks = document.querySelectorAll(".nav a");
         if (menuLinks.length === 0) return;
 
         const sections = [...menuLinks]
@@ -110,6 +111,7 @@
 
         btn.addEventListener("click", () => {
             nav.classList.toggle("active");
+            btn.classList.toggle("active");
         });
     };
 
