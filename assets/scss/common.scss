@@ -160,6 +160,9 @@ header {
         position: absolute;
         right: 20px;
         top: 16px;
+        .mo{
+            display: none;
+        }
     }
     .mobile-menu-btn{
         display: none;
@@ -597,13 +600,15 @@ header {
     header{
         min-height: 6rem;
         .btn-move{
-            width: 4rem;
             height: 4rem;
-            padding: .2rem;
+            padding: .5rem 1rem;
             right: 1.6rem;
             top: 1rem;
-            span{
+            .pc{
                 display: none;
+            }
+            .mo{
+                display: inline-block;
             }
         }
         .header-fixed{
@@ -624,6 +629,9 @@ header {
                 &:not(:first-child){
                     margin: 1.4rem 0 0;
                 }
+            }
+            &:hover{
+                background-color: transparent;
             }
             &.active{
                 display: flex;
