@@ -629,9 +629,9 @@ header {
                 &:not(:first-child){
                     margin: 1.4rem 0 0;
                 }
-            }
-            &:hover{
-                background-color: transparent;
+                &:hover{
+                    background-color: transparent;
+                }
             }
             &.active{
                 display: flex;

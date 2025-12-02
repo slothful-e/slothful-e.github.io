@@ -632,7 +632,7 @@ header .mobile-menu-btn {
   header nav a:not(:first-child) {
     margin: 1.4rem 0 0;
   }
-  header nav:hover {
+  header nav a:hover {
     background-color: transparent;
   }
   header nav.active {
