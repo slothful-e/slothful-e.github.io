@@ -11,9 +11,23 @@
 [class*=btn-]:hover {
   color: var(--color-signature);
 }
-[class*=btn-] .btn-signature {
+
+.btn-signature {
   border-color: var(--color-signature);
   background-color: var(--color-signature);
+}
+.btn-more {
+  border-color: transparent;
+  background-color: transparent;
+  color: var(--color-333);
+  font-size: 18px;
+}
+.btn-more em {
+  font-size: 20px;
+  color: var(--color-pink);
+}
+.btn-more:hover, .btn-more:hover em {
+  color: var(--color-mint);
 }
 
 .chip {
@@ -658,7 +672,7 @@ header .mobile-menu-btn {
   }
   .main-page section:not(:first-child) {
     margin-top: 2rem;
-    padding: 2.6rem 2rem;
+    padding: 2rem 1.6rem;
     border-radius: var(--border-radius);
     background-color: var(--color-white);
   }
@@ -732,7 +746,7 @@ header .mobile-menu-btn {
   .main-page .section-work .work-box {
     width: 100%;
     margin: 2rem 0 0;
-    padding: 2rem;
+    padding: 1.6rem;
     background-color: var(--color-background);
   }
   .main-page .section-work .boxs {
@@ -748,6 +762,11 @@ header .mobile-menu-btn {
   }
   .main-page .section-certificate ul {
     width: 100%;
+  }
+  .main-page .section-about .email {
+    text-decoration: none !important;
+    color: inherit !important;
+    pointer-events: none;
   }
   .sub-page {
     margin-top: 3rem;
