@@ -692,20 +692,10 @@ header {
             }
         }
         .boxs{
-            &:nth-child(even){
-                flex-direction: column-reverse;
-            }
-            &:nth-child(odd){
-                flex-direction: column;
-            }
-            .chip{
-                position: absolute;
-                top: 0;
-                left: 50%;
-                transform: translateX(-50%);
-            }
+            flex-direction: column;
         }
         .box{
+            padding: 0;
             &.img-wrap{
                 flex: 0 0 auto;
                 height: 16rem;
@@ -717,9 +707,6 @@ header {
                     object-fit: cover;
                     object-position: top;
                 }
-            }
-            &.text-wrap{
-                padding: 0;
             }
         }
         ul.dash li::before{
@@ -770,6 +757,18 @@ header {
             .boxs{
                 gap: 0;
                 padding-top: 5rem;
+                &:nth-child(even){
+                    flex-direction: column-reverse;
+                }
+                // &:nth-child(odd){
+                //     flex-direction: column;
+                // }
+                .chip{
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
             }
             .scroll{
                 max-height: 50rem;
@@ -782,6 +781,11 @@ header {
         .section-certificate{
             ul{
                 width: 100%;
+            }
+        }
+        .section-skills{
+            .boxs{
+                gap: 40px;
             }
         }
         .section-about{

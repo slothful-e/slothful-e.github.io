@@ -684,17 +684,11 @@ header .mobile-menu-btn {
     border-radius: var(--border-radius);
     background-color: var(--color-white);
   }
-  .main-page .boxs:nth-child(even) {
-    flex-direction: column-reverse;
-  }
-  .main-page .boxs:nth-child(odd) {
+  .main-page .boxs {
     flex-direction: column;
   }
-  .main-page .boxs .chip {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+  .main-page .box {
+    padding: 0;
   }
   .main-page .box.img-wrap {
     flex: 0 0 auto;
@@ -709,9 +703,6 @@ header .mobile-menu-btn {
        object-fit: cover;
     -o-object-position: top;
        object-position: top;
-  }
-  .main-page .box.text-wrap {
-    padding: 0;
   }
   .main-page ul.dash li::before {
     top: 1rem;
@@ -761,6 +752,15 @@ header .mobile-menu-btn {
     gap: 0;
     padding-top: 5rem;
   }
+  .main-page .section-work .boxs:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+  .main-page .section-work .boxs .chip {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .main-page .section-work .scroll {
     max-height: 50rem;
     padding: 4rem 0 0;
@@ -770,6 +770,9 @@ header .mobile-menu-btn {
   }
   .main-page .section-certificate ul {
     width: 100%;
+  }
+  .main-page .section-skills .boxs {
+    gap: 40px;
   }
   .main-page .section-about .email {
     text-decoration: none !important;
