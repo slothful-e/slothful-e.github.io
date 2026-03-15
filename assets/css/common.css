@@ -131,46 +131,50 @@ header .header.fixed {
 header .header-content {
   display: flex;
   align-items: center;
+  position: relative;
   min-height: 70px;
+  margin-right: 130px;
 }
-header nav {
+header .nav-box {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+header .nav-box nav {
   display: flex;
   gap: 10px;
 }
-header nav .nav {
+header .nav-box .nav {
   flex-shrink: 0;
 }
-header nav a {
+header .nav-box a {
   position: relative;
   display: inline-block;
   padding: 2px 15px;
-  font-size: 18px;
   font-weight: 500;
+  font-size: 18px;
 }
-header nav a:not(:first-child) {
+header .nav-box a:not(:first-child) {
   margin-left: 14px;
 }
-header nav a::before {
+header .nav-box a::before {
   content: "";
   position: absolute;
   left: 8px;
-  bottom: 0;
+  bottom: -4px;
   width: 0;
   height: 6px;
   border-radius: 2px;
   background-color: transparent;
   transition: all 0.3s;
 }
-header nav a.active::before {
+header .nav-box a.active::before {
   width: calc(100% - 16px);
   background-color: var(--color-pink);
   opacity: 0.6;
 }
-header nav a:hover {
+header .nav-box a:hover {
   border-radius: 8px;
   background-color: var(--color-white);
 }
@@ -184,6 +188,11 @@ header .btn-move .mo {
 }
 header .mobile-menu-btn {
   display: none;
+}
+
+footer {
+  padding: 120px 0 20px;
+  text-align: center;
 }
 
 .content {
@@ -268,7 +277,7 @@ header .mobile-menu-btn {
   background-color: var(--color-333);
 }
 .main-page .hero {
-  margin-bottom: 80px;
+  padding-bottom: 80px;
 }
 .main-page .hero .boxs::before {
   content: "";
@@ -589,13 +598,22 @@ header .mobile-menu-btn {
   display: block;
 }
 
+.mo-show {
+  display: none !important;
+}
+
 @media (max-width: 1024px) {
+  .pc-show {
+    display: none !important;
+  }
+  .mo-show {
+    display: block !important;
+  }
   h2 {
-    margin-bottom: 0;
     font-size: 1.8rem;
   }
   h2 strong {
-    margin-bottom: 1rem;
+    margin-top: 1rem;
     font-size: 2.4rem;
     line-height: 1.4;
   }
@@ -620,43 +638,42 @@ header .mobile-menu-btn {
   header {
     min-height: 6rem;
   }
-  header .btn-move {
-    height: 4rem;
-    padding: 0.5rem 1rem;
-    right: 1.6rem;
-    top: 1rem;
-  }
-  header .btn-move .pc {
-    display: none;
-  }
-  header .btn-move .mo {
-    display: inline-block;
-  }
-  header .header-fixed {
+  header .header-content {
     min-height: 6rem;
-    width: calc(100vw - 3.2rem);
+    margin-right: 0;
   }
-  header nav {
+  header .nav-box {
     display: none;
-    flex-direction: column;
-    width: 20rem;
-    padding: 2rem;
     top: 6rem;
     left: -2rem;
     transform: unset;
-    background-color: rgba(244, 244, 244, 0.8);
   }
-  header nav a {
+  header .nav-box.active {
+    display: block;
+  }
+  header .nav-box nav {
+    flex-direction: column;
+    width: 20rem;
+    padding: 2rem 2rem 6.6rem 2rem;
+    background-color: var(--color-background);
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  header .nav-box nav a {
     font-size: 1.6rem;
   }
-  header nav a:not(:first-child) {
+  header .nav-box nav a:not(:first-child) {
     margin: 1.4rem 0 0;
   }
-  header nav a:hover {
+  header .nav-box nav a:hover {
     background-color: transparent;
   }
-  header nav.active {
-    display: flex;
+  header .nav-box .btn-move {
+    position: absolute;
+    top: 82%;
+    right: 1.6rem;
+    width: calc(100% - 4rem);
+    font-size: 1.4rem;
   }
   header .mobile-menu-btn {
     display: block;
@@ -728,7 +745,7 @@ header .mobile-menu-btn {
     top: 1rem;
   }
   .main-page .hero {
-    margin-bottom: 6rem;
+    padding-bottom: 6rem;
   }
   .main-page .hero .boxs::before,
 .main-page .hero .box.right::after, .main-page .hero .box.right::before,

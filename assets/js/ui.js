@@ -122,13 +122,21 @@
     * ----------------------------------------------------- */
     const initMobileMenu = () => {
         const btn = document.querySelector(".mobile-menu-btn");
-        const nav = document.querySelector("header nav");
+        const nav = document.querySelector("header .nav-box");
 
         if (!btn || !nav) return;
 
-        btn.addEventListener("click", () => {
+        btn.addEventListener("click", (e) => {
+            e.stopPropagation();
             nav.classList.toggle("active");
             btn.classList.toggle("active");
+        });
+    
+        document.addEventListener("click", (e) => {
+            if (!nav.contains(e.target) && !btn.contains(e.target)) {
+                nav.classList.remove("active");
+                btn.classList.remove("active");
+            }
         });
     };
 
