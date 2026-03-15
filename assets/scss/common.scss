@@ -1,14 +1,20 @@
 //ui style
 [class*='btn-']{
-    padding: 10px 12px;
-    border-radius: 12px;
+    padding: 4px 6px;
+    border-radius: 6px;
     border: 1px solid var(--color-black);
-    font-weight: 500;
     background-color: var(--color-black);
     color: var(--color-white);
     text-align: center;
-    &:hover{
-        color: var(--color-signature);
+    font-size: 16px;
+    transition: all 0.3s ease; // 부드러운 전환 효과
+    // &:active {
+    //     transform: translateY(2px); // 클릭했을 때 살짝 눌리는 느낌
+    // }
+    &:hover {
+        // box-shadow: 0 4px 12px rgb(0 0 0 / 60%);
+        background-color: transparent;
+        color: var(--color-black);
     }
 }
 .btn{
@@ -16,25 +22,25 @@
         border-color: var(--color-signature);
         background-color: var(--color-signature);
     }
-    &-more{
-        border-color: transparent;
-        background-color: transparent;
-        color: var(--color-333);
-        font-size: 18px;
-        em{
-            font-size: 20px;
-            color: var(--color-pink);
-        }
-        &:hover,&:hover em{
-            color: var(--color-mint);
-        }
+}
+.link-more{
+    margin: 10px 12px;
+    padding: 0 2px;
+    color: var(--color-333);
+    font-weight: bold;
+    em{
+        font-size: 20px;
+        color: var(--color-pink);
+    }
+    &:hover{
+        background: linear-gradient(transparent 60%, var(--color-signature) 40%); // 형광펜 효과
     }
 }
 .chip{
     display: inline-block;
     vertical-align: middle;
-    padding: 4px 12px;
-    border-radius: 8px;
+    padding: 2px 12px;
+    border-radius: 16px;
     background-color: var(--color-pink);
     color: var(--color-white);
     font-size: 14px;
@@ -46,13 +52,14 @@
     display: flex;
     flex-wrap: wrap;
     gap: 6px 4px;
-    margin-top: 20px;
+    margin-top: 16px;
     li{
         padding: 4px 12px;
         border-radius: 20px;
         // border: 1px solid var(--color-signature);
         background-color: var(--color-signature);
         color: var(--color-333);
+        font-size: 14px;
     }
 }
 h1{
@@ -64,21 +71,28 @@ h1{
     }
 }
 h2{
-    margin-bottom: 28px;
-    font-size: 30px;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
     strong{
         display: block;
-        font-size: 40px;
+        font-size: 30px;
     }
 }
 h3{
-    padding: 40px 0;
+    padding: 24px 0 40px;
     font-size: 24px;
     line-height: 1.6;
 }
 h4{
+    margin-bottom: 14px;
     font-size: 20px;
     line-height: 1.6;
+}
+.text-point{
+    font-weight: 600;
+    color: var(--color-black);
+    background: linear-gradient(transparent 60%, var(--color-signature) 40%); // 형광펜 효과
+    padding: 0 2px;
 }
 //공통
 .wrap{
@@ -94,7 +108,7 @@ h4{
 header {
     position: relative;
     top: 0;
-    min-height: 80px;
+    min-height: 70px;
     width: 100%;
     z-index: 100;
     .logo{
@@ -104,15 +118,19 @@ header {
            }
         }
     }
-    .header-fixed{
-        display: flex;
-        align-items: center;
+    .header{
         position: fixed;
         top: 0;
         width: 100%;
-        max-width: 1500px;
-        min-height: 80px;
-        background-color: #f4f4f4cc;
+        background-color: var(--color-background);
+        &.fixed{
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    }
+    .header-content{
+        display: flex;
+        align-items: center;
+        min-height: 70px;
     }
     nav{
         position: absolute;
@@ -137,10 +155,10 @@ header {
                 content: "";
                 position: absolute;
                 left: 8px;
-                bottom: -2px;
+                bottom: 0;
                 width: 0;
-                height: 3px;
-                border-radius: 10px;
+                height: 6px;
+                border-radius: 2px;
                 background-color: transparent;
                 transition: all .3s;
             }
@@ -148,11 +166,12 @@ header {
                 &::before{
                     width: calc(100% - 16px);
                     background-color: var(--color-pink);
+                    opacity: .6;
                 }
             }
             &:hover{
-                border-radius: 10px;
-                background-color: #f9aaaa45;
+                border-radius: 8px;
+                background-color: var(--color-white);
             }
         }
     }
@@ -293,6 +312,9 @@ header {
                 z-index: 2;
             }
             &.left{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
                 background-color: var(--color-white);
                 &::after,&::before{
                     border-bottom-right-radius: var(--border-radius);
@@ -325,7 +347,7 @@ header {
                 .rolling-list{
                     position: relative;
                     height: 350px;
-                    padding: 80px 0 0 70px;
+                    padding: 40px 0 0 70px;
                     overflow: hidden;
                     z-index: 3;
                     li{

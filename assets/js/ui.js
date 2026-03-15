@@ -2,6 +2,7 @@
     const init = () => {
         initRollingList();
         initScrollSpy();
+        initHeaderFixed();
         initMobileMenu();
     };
 
@@ -97,6 +98,22 @@
                     menuLinks[index].classList.add("active");
                 }
             });
+        });
+    };
+
+     /* -----------------------------------------------------
+     * Header Fixed Active Toggle
+     * ----------------------------------------------------- */
+     const initHeaderFixed = () => {
+        const header = document.querySelector("header .header");
+        if (!header) return;
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 0) {
+                header.classList.add("fixed");
+            } else {
+                header.classList.remove("fixed");
+            }
         });
     };
 
