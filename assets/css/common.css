@@ -829,6 +829,9 @@ footer {
   .main-page .section-skills .boxs {
     gap: 40px;
   }
+  .main-page .section-about .blog {
+    font-size: inherit;
+  }
   .main-page .section-about .email {
     text-decoration: none !important;
     color: inherit !important;
