@@ -23,9 +23,7 @@
         background-color: var(--color-signature);
     }
 }
-.link-more{
-    margin: 10px 12px;
-    padding: 0 2px;
+.link-line{
     color: var(--color-333);
     font-weight: bold;
     em{
@@ -84,7 +82,6 @@ h3{
     line-height: 1.6;
 }
 h4{
-    margin-bottom: 14px;
     font-size: 20px;
     line-height: 1.6;
 }
@@ -229,6 +226,7 @@ footer{
         border-radius: var(--border-radius);
         &.img-wrap{
             display: block;
+            position: relative;
             padding: 0;
             height: 280px;
             border: 1px solid #a0a0a0;
@@ -238,9 +236,29 @@ footer{
                 min-height: 100%;
                 width: 100%;
             }
+
             &:is(a){
+                &::after{
+                    content: "move";
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background-color: transparent;
+                    color: transparent;
+                    opacity: 0;
+                    transition: all .3s;
+                }
                 &:hover{
-                    opacity: .5;
+                    &::after{
+                        background-color: var(--color-black);
+                        color: var(--color-white);
+                        opacity: .7;
+                    }
                 }
             }
         }
@@ -609,7 +627,7 @@ footer{
         font-size: 1.8rem;
         strong{
             margin-top: 1rem;
-            font-size: 2.4rem;
+            font-size: 2.2rem;
             line-height: 1.4;
         }
     }
@@ -620,6 +638,12 @@ footer{
     h4{
         font-size: 1.6rem;
     }
+    .link-line{
+        display: inline-block;
+        margin-top: 2rem;
+        font-size: 1.6rem;
+        background: linear-gradient(transparent 60%, var(--color-signature) 40%); // 형광펜 효과
+    }
     .inner{
         padding: 0 1.6rem;
     }
@@ -629,9 +653,6 @@ footer{
                 position: absolute;
                 left: 50%;
                 transform: translateX(-50%);
-                .text{
-                    display: none;
-                }
             }
         }
     }
@@ -789,7 +810,7 @@ footer{
             .work-box{
                 width: 100%;
                 margin: 2rem 0 0;
-                padding: 1.6rem;
+                padding: 1.6rem 0 1.6rem 1.6rem;
                 background-color: var(--color-background);
             }
             .boxs{
