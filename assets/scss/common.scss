@@ -510,10 +510,19 @@ footer{
             display: block;
             margin-bottom: 20px;
         }
-        .work-list li{
+        .work-list>li{
             &:not(:first-child){
-                margin-top: 30px;
+                &::before{
+                    content: "--------";
+                    display: block;
+                    padding: 20px 0;
+                    color: #a4a4a4;
+                }
             }
+        }
+        .project-list{
+            margin-top: 20px;
+            font-size: 16px;
         }
         .work-box{
             width: 100%;
@@ -807,6 +816,9 @@ footer{
             }
         }
         .section-work{
+            .project-list{
+                font-size: 1.2rem;
+            }
             .work-box{
                 width: 100%;
                 margin: 2rem 0 0 0;

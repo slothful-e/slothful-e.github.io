@@ -517,8 +517,15 @@ footer {
   display: block;
   margin-bottom: 20px;
 }
-.main-page .section-work .work-list li:not(:first-child) {
-  margin-top: 30px;
+.main-page .section-work .work-list > li:not(:first-child)::before {
+  content: "--------";
+  display: block;
+  padding: 20px 0;
+  color: #a4a4a4;
+}
+.main-page .section-work .project-list {
+  margin-top: 20px;
+  font-size: 16px;
 }
 .main-page .section-work .work-box {
   width: 100%;
@@ -796,6 +803,9 @@ footer {
     right: 0;
     bottom: 0;
     transform: none;
+  }
+  .main-page .section-work .project-list {
+    font-size: 1.2rem;
   }
   .main-page .section-work .work-box {
     width: 100%;
