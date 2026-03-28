@@ -510,19 +510,39 @@ footer{
             display: block;
             margin-bottom: 20px;
         }
-        .work-list>li{
-            &:not(:first-child){
-                &::before{
-                    content: "--------";
-                    display: block;
-                    padding: 20px 0;
-                    color: #a4a4a4;
+        .work-list{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            >li{
+                max-width: 721px;
+                &:not(:first-child){
+                    &::before{
+                        content: "--------";
+                        display: block;
+                        padding: 20px 0;
+                        color: #a4a4a4;
+                    }
                 }
             }
         }
         .project-list{
             margin-top: 20px;
             font-size: 16px;
+            text-align: left;
+            >li{
+                position: relative;
+                padding-left: 12px;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 12px;
+                    left: 0;
+                    width: 6px;
+                    height: 1px;
+                    background-color: var(--color-333);
+                }
+            }
         }
         .work-box{
             width: 100%;
@@ -816,8 +836,11 @@ footer{
             }
         }
         .section-work{
+            .work-list > li {
+                max-width: 632px;
+            }
             .project-list{
-                font-size: 1.2rem;
+                font-size: 1.4rem;
             }
             .work-box{
                 width: 100%;

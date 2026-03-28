@@ -517,6 +517,14 @@ footer {
   display: block;
   margin-bottom: 20px;
 }
+.main-page .section-work .work-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-page .section-work .work-list > li {
+  max-width: 721px;
+}
 .main-page .section-work .work-list > li:not(:first-child)::before {
   content: "--------";
   display: block;
@@ -526,6 +534,20 @@ footer {
 .main-page .section-work .project-list {
   margin-top: 20px;
   font-size: 16px;
+  text-align: left;
+}
+.main-page .section-work .project-list > li {
+  position: relative;
+  padding-left: 12px;
+}
+.main-page .section-work .project-list > li::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 6px;
+  height: 1px;
+  background-color: var(--color-333);
 }
 .main-page .section-work .work-box {
   width: 100%;
@@ -804,8 +826,11 @@ footer {
     bottom: 0;
     transform: none;
   }
+  .main-page .section-work .work-list > li {
+    max-width: 632px;
+  }
   .main-page .section-work .project-list {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   .main-page .section-work .work-box {
     width: 100%;
