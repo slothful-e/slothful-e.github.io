@@ -560,6 +560,7 @@ footer{
             margin: 0 auto 0;   
             border-radius: var(--border-radius);
             background-color: var(--color-light-gray);
+            overflow: hidden;
         }
         .scroll{
             width: 100%;
@@ -686,10 +687,11 @@ footer{
         height: 4rem;
     }    
     h2{
+        margin-bottom: 4rem;
         max-width: 50%;
         font-size: 1.8rem;
         strong{
-            margin-top: 2rem;
+            margin-top: 3rem;
             font-size: 2.2rem;
             line-height: 1.4;
         }
@@ -713,11 +715,11 @@ footer{
         padding: 0 2rem;
     }
     .content {
-        padding: 9rem 0;
+        padding: 8rem 0;
     }
     header{
         .header-content{
-            min-height: 6.5rem;
+            min-height: 7rem;
             margin-right: 0;
         }
         .logo .name{
@@ -726,7 +728,7 @@ footer{
         .nav-box{
             display: none;
             position: absolute;
-            top: 6.5rem;
+            top: 7rem;
             right: -2rem;
             width: 26rem;
             padding: 2rem 2rem 10rem 2rem;
@@ -845,12 +847,10 @@ footer{
             margin: 0;
             .boxs::before,
             .box.right::after, .box.right::before
-            // .circle-wrap::after, .circle-wrap::before
             {
                 display: none;
             }
             .title-sub{
-                margin-top: 4rem;
                 font-size: 1.8rem;
             }
             .boxs{
@@ -858,9 +858,9 @@ footer{
             }
             .box{
                 min-height: auto;
-                padding: 2.8rem;
+                padding: 2.6rem;
                 &.right{
-                    padding: 4rem 2.8rem;
+                    padding: 3rem 2.6rem;
                     .rolling-list{
                         height: 27rem;
                         width: 100%;
@@ -890,7 +890,7 @@ footer{
                 left: auto;
                 right: 0;
                 bottom: auto;
-                top: 36rem;
+                top: 34rem;
                 transform: none;
                 &::after, &::before{
                     height: 5rem;
