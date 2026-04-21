@@ -26,17 +26,18 @@
 
 :root {
     --color-white: #ffffff;
-    --color-background: #f3f3f3;
-    --color-light-gray: #f3f3f3;
-    --color-gray: #b0b4b9;
-    --color-dark-gray: #666666;
-    --color-333: #333333;
+    --color-gray-100: #f3f3f3;
+    --color-gray-300: #b0b4b9;
+    --color-gray-600: #666666;
+    --color-gray-900: #333333;
     --color-black: #000000;
-    --color-signature: #ecf95a;
+    --color-neon-yellow: #ebff0a;
+    --color-neon-green: #39ff14;
+    /* --color-light-pink: #ffae9494; */
     --color-pink: #ff6969;
     --color-mint: #32d3ae;
     --border-radius: 40px;
-    --font-family: 400 18px/1.8  "Pretendard", sans-serif;
+    --font-family: 400 18px/1.4  "Pretendard", sans-serif;
 }
 
 
