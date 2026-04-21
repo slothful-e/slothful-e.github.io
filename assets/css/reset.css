@@ -26,14 +26,16 @@
 
 :root {
     --color-white: #ffffff;
-    --color-background: #f4f4f4;
-    --color-eee: #eeeeee;
+    --color-background: #f3f3f3;
+    --color-light-gray: #f3f3f3;
+    --color-gray: #b0b4b9;
+    --color-dark-gray: #666666;
     --color-333: #333333;
     --color-black: #000000;
     --color-signature: #ecf95a;
-    --color-pink: #f9aaaa;
+    --color-pink: #ff6969;
     --color-mint: #32d3ae;
-    --border-radius: 18px;
+    --border-radius: 40px;
     --font-family: 400 18px/1.8  "Pretendard", sans-serif;
 }
 
@@ -107,5 +109,8 @@ strong{
     body {
         font-size: 1.6rem;
         line-height: 1.6;
+    }
+    :root {
+        --border-radius: 3rem;
     }
 }

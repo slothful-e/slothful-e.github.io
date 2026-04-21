@@ -9,6 +9,7 @@
     <meta property="og:description" content="사용자 경험을 코드로 구현하는 웹 퍼블리셔">
     <meta property="og:url" content="slothful-e.github.io/">
     <title>𐂂 Introduction</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/common.css">
 </head>
@@ -20,9 +21,14 @@
             <div class="header">
                 <div class="inner">
                     <div class="header-content">
-                        <a href="#hero" class="nav logo active">
-                            <h1><span class="symbol">𐂂</span> Profile</h1>
-                        </a>
+                        <h1 class="nav logo">
+                            <a href="#hero">
+                                <span class="symbol">𐂂</span>
+                                <span class="name">KIL</span>
+                                <span class="text">:Profile</span>
+                            </a>
+                        </h1>
+                        <!--mo-show-->
                         <button type="button" class="mobile-menu-btn">
                             <div><span>&nbsp;</span></div>
                         </button>
@@ -35,12 +41,17 @@
                                 <!-- <div><a class="nav" href="#section-style">Style Guide</a></div> -->
                                 <div class="nav"><a href="#section-about">About Me</a></div>
                             </nav>
-                            <a href="//webs-kilgaae.github.io/Introduction/" class="btn-move mo-show">🌈Move
-                                v.2023</a>
+                            <a href="//webs-kilgaae.github.io/Introduction/" class="btn-move mo-show">
+                                <span class="icon">🌈</span>
+                                <span class="text">Move v.2023</span>
+                            </a>
                         </div>
+                        <!--//mo-show-->
+                        <a href="//webs-kilgaae.github.io/Introduction/" class="btn-move pc-show">
+                            <span class="icon">🌈</span>
+                            <span class="text">Move v.2023</span>
+                        </a>
                     </div>
-                    <a href="//webs-kilgaae.github.io/Introduction/" class="btn-move pc-show">🌈 Move
-                        v.2023</a>
                 </div>
             </div>
         </header>
@@ -49,24 +60,25 @@
         <div class="container">
             <div class="content">
                 <div class="main-page">
-                    <div class="inner">
-                        <!-- HERO SECTION -->
-                        <section class="hero" id="hero">
+                    <!-- HERO SECTION -->
+                    <section class="hero" id="hero">
+                        <div class="inner">
                             <div class="boxs">
                                 <div class="box left">
                                     <h2>신뢰를 코딩하는<strong>웹 퍼블리셔, 길가애입니다.</strong></h2>
                                     <!-- <p class="title-sub">
-                                        웹 퍼블리셔로서 플랫폼의 상호작용을 최적화하고, 사용자가 필요한 정보를 가장 명확하게
-                                        받아들일 수 있도록 구조와 흐름을 설계합니다. <br>
-                                        디자인과 개발의 경계를 자연스럽게 이어주는 역할을 통해,<br>
-                                        팀과 고객의 요구를 정확히 이해하고 이를 화면 위에서 구현 가능한 형태로 번역합니다.<br>
-                                        더 나은 사용자 경험을 만들기 위해 디테일을 탐구하며,<br>
-                                        완성도 높은 컨텐츠와 웹 인터페이스를 제작하는 데 집중하고 있습니다.
-                                    </p> -->
+                                            웹 퍼블리셔로서 플랫폼의 상호작용을 최적화하고, 사용자가 필요한 정보를 가장 명확하게
+                                            받아들일 수 있도록 구조와 흐름을 설계합니다. <br>
+                                            디자인과 개발의 경계를 자연스럽게 이어주는 역할을 통해,<br>
+                                            팀과 고객의 요구를 정확히 이해하고 이를 화면 위에서 구현 가능한 형태로 번역합니다.<br>
+                                            더 나은 사용자 경험을 만들기 위해 디테일을 탐구하며,<br>
+                                            완성도 높은 컨텐츠와 웹 인터페이스를 제작하는 데 집중하고 있습니다.
+                                        </p> -->
                                     <p class="title-sub">
-                                        단순히 화면을 그리는 것을 넘어, <strong>사용자 상호작용을 최적화</strong>하는 구조를 설계합니다.<br>
-                                        디자인의 의도를 정확히 해석하여 <strong>현실 가능한 웹 인터페이스</strong>로 번역하며,<br>
-                                        대규모 프로젝트를 통해 검증된 <strong>완성도 높은 마크업</strong>을 지향합니다.
+                                        단순히 화면을 그리는 것을 넘어, <strong class="text-point">사용자 상호작용을 최적화</strong>하는 구조를
+                                        설계합니다.<br>
+                                        디자인의 의도를 정확히 해석하여 <strong class="text-point">현실 가능한 웹 인터페이스</strong>로 번역하며,<br>
+                                        대규모 프로젝트를 통해 검증된 <strong class="text-point">완성도 높은 마크업</strong>을 지향합니다.
                                     </p>
                                     <div>
                                         <a href="./pages/me.pdf" target="_blank" rel="noopener noreferrer"
@@ -132,22 +144,23 @@
                                     </div>
                                 </div>
                             </div>
-                        </section>
+                        </div>
+                    </section>
 
-                        <!-- SKILLS SECTION -->
-                        <section class="section-skills" id="section-skills">
+                    <!-- SKILLS SECTION -->
+                    <section class="section-skills" id="section-skills">
+                        <div class="inner">
                             <div class="section-top">
-                                <span class="chip">Who I Am</span>
                                 <h3>Introduction & Skills</h3>
                                 <p>배움을 실전에 연결하며 웹 표준과 사용자 경험을 중심으로 꾸준히 성장하고 있습니다.</p>
                             </div>
-                            <ul class="boxs">
+                            <ul data-aos="fade-up" data-aos-duration="2000" class="boxs">
                                 <li class="box">
-                                    <h4><span class="ico">🚀</span> 행동력</h4>
+                                    <h4><span class="icon">🚀</span> 행동력</h4>
                                     <p>배운 것을 즉시 실무에 적용하며, 경험을 통해 정체되지 않고 꾸준히 성장하고 있습니다.</p>
                                 </li>
                                 <li class="box">
-                                    <h4><span class="ico">💻</span> 직무 역량</h4>
+                                    <h4><span class="icon">💻</span> 직무 역량</h4>
                                     <p>사용자 경험 중심의 정확한 마크업과 유지보수가 용이한 효율적인 UI 구현을 지향합니다.</p>
                                     <ul class="tags">
                                         <li>#Web_Publisher</li>
@@ -155,7 +168,7 @@
                                     </ul>
                                 </li>
                                 <li class="box">
-                                    <h4><span class="ico">🛠</span> 보유 기술</h4>
+                                    <h4><span class="icon">🛠</span> 보유 기술</h4>
                                     <p>Gulp, Git 등 최신 작업 환경에 능숙하며 프로젝트 최적화를 위해 기술 역량을 확장합니다.</p>
                                     <ul class="tags">
                                         <li>HTML5</li>
@@ -168,19 +181,19 @@
                                     </ul>
                                 </li>
                             </ul>
-                        </section>
+                        </div>
+                    </section>
 
-                        <!-- WORK EXPERIENCE SECTION -->
-                        <section class="section-work" id="section-work">
+                    <!-- WORK EXPERIENCE SECTION -->
+                    <section class="section-work" id="section-work">
+                        <div class="inner">
                             <div class="section-top">
-                                <!-- <span class="chip">What I Do</span> -->
-                                <span class="chip">Who I Am</span>
                                 <h3>Work Experience</h3>
-                                <strong class="total">총 경력 4년 8개월</strong>
+                                <p class="total">총 경력 4년 8개월</p>
                                 <ul class="work-list">
-                                    <li>
-                                        <strong>(주)DK BMC</strong>
-                                        <p>
+                                    <li class="work-company">
+                                        <strong class="company">(주)DK BMC</strong>
+                                        <p class="date">
                                             웹 퍼블리셔 / 대리<br>
                                             2023년 3월 ~ 2025년 11월 (2년 9개월)
                                         </p>
@@ -190,9 +203,9 @@
                                             <li>대표적으로 LG CNS B2B 파트너 포털 프로젝트와 넥센타이어 디지털 CRM 1단계 구축에 참여한 경험이 있습니다.</li>
                                         </ul>
                                     </li>
-                                    <li>
-                                        <strong>(주)하이웹솔루션</strong>
-                                        <p>
+                                    <li class="work-company">
+                                        <strong class="company">(주)하이웹솔루션</strong>
+                                        <p class="date">
                                             웹 퍼블리셔 / 주임<br>
                                             2021년 4월 ~ 2023년 2월 (1년 11개월)
                                         </p>
@@ -416,93 +429,93 @@
                                     </li>
 
                                     <li class="button-wrap">
-                                        <a href="https://webs-kilgaae.github.io/Introduction/" class="btn-move">🌈 Move
-                                            v.2023</a>
+                                        <a href="//webs-kilgaae.github.io/Introduction/" class="btn-move">
+                                            <span class="icon">🌈</span>
+                                            <span class="text">Move v.2023</span>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
-                        </section>
+                        </div>
+                    </section>
 
-                        <!-- CAREER SECTION -->
-                        <section class="section-career" id="section-career">
-                            <div class="section-top">
-                                <span class="chip">Who I Am</span>
-                                <h3>MY Career</h3>
+                    <!-- CAREER SECTION -->
+                    <section class="section-career" id="section-career">
+                        <div class="section-top">
+                            <h3>MY Career</h3>
+                        </div>
+                        <div class="career-description">
+                            <p class="text-box">
+                                웹 퍼블리셔로서 다양한 웹 프로젝트에 참여하며 실무 경험과 문제 해결 능력을 쌓아 왔습니다. 처음 웹을 접했을 때부터 사용자가 편리하게 이용할
+                                수 있는 화면을 만드는 일에 매력을 느꼈고, 이를 실현하기 위해 <strong class="text-point">웹 표준과 접근성을 기반으로
+                                    견고한 마크업 구조</strong>를
+                                꾸준히 연습했습니다.
+                            </p>
+                            <p class="text-box">
+                                프로젝트를 진행하면서 단순히 화면을 만드는 것을 넘어 ‘사용자가 어떻게 느끼고 어떤 동선을 거칠지’를 항상 고려하여 UI를 구현했습니다.
+                                디자이너와 협업하며 요구사항을 조율하고, <strong class="text-point">반응형 환경과 브라우저 호환성</strong>을 고려한
+                                코드를 작성하는 것을 원칙으로 삼았습니다.
+                            </p>
+                            <p class="text-box">
+                                또한 새로운 기술을 빠르게 습득하고 실무에 적용하며 팀 전체의 효율을 높이는 퍼블리셔가 되기 위해 노력하고
+                                있습니다. 앞으로도 기술 트렌드 변화에 능동적으로 대응하며, <strong class="text-point">사용자 중심의 웹을
+                                    구현</strong>하는 데 필요한 역량을
+                                지속적으로 성장시켜 나가고자 합니다.
+                            </p>
+                        </div>
+                    </section>
 
-                                <div class="career-description">
-                                    <p class="text-box">
-                                        웹 퍼블리셔로서 다양한 웹 프로젝트에 참여하며 실무 경험과 문제 해결 능력을 쌓아 왔습니다. 처음 웹을 접했을 때부터 사용자가 편리하게 이용할
-                                        수 있는 화면을 만드는 일에 매력을 느꼈고, 이를 실현하기 위해 <strong class="text-point">웹 표준과 접근성을 기반으로
-                                            견고한 마크업 구조</strong>를
-                                        꾸준히 연습했습니다.
-                                    </p>
-                                    <p class="text-box">
-                                        프로젝트를 진행하면서 단순히 화면을 만드는 것을 넘어 ‘사용자가 어떻게 느끼고 어떤 동선을 거칠지’를 항상 고려하여 UI를 구현했습니다.
-                                        디자이너와 협업하며 요구사항을 조율하고, <strong class="text-point">반응형 환경과 브라우저 호환성</strong>을 고려한
-                                        코드를 작성하는 것을 원칙으로 삼았습니다.
-                                    </p>
-                                    <p class="text-box">
-                                        또한 새로운 기술을 빠르게 습득하고 실무에 적용하며 팀 전체의 효율을 높이는 퍼블리셔가 되기 위해 노력하고
-                                        있습니다. 앞으로도 기술 트렌드 변화에 능동적으로 대응하며, <strong class="text-point">사용자 중심의 웹을
-                                            구현</strong>하는 데 필요한 역량을
-                                        지속적으로 성장시켜 나가고자 합니다.
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- CERTIFICATE SECTION -->
-                        <section class="section-certificate" id="section-certificate">
-                            <div class="section-top">
-                                <span class="chip">Who I Am</span>
-                                <h3>Certificate</h3>
-                                <ul>
-                                    <li>2021.03 - 2026.02
-                                        <p>한국방송통신대학교 컴퓨터과학과</p>
-                                    </li>
-                                    <li>2020.06
-                                        <p>GTQ자격증 1급</p>
-                                    </li>
-                                    <li>2020.02 - 2020.07
-                                        <p>디지털디자인 웹디자인/웹퍼블리셔(반응형ul/ux디자인) 양성과정</p>
-                                    </li>
-                                    <!-- <li>2014.03 - 2016.01
-                                        <p>경희사이버대학교 문화예술경영학과</p>
-                                    </li> -->
-                                </ul>
-                            </div>
-                        </section>
+                    <!-- CERTIFICATE SECTION -->
+                    <section class="section-certificate" id="section-certificate">
+                        <div class="section-top">
+                            <h3>Certificate</h3>
+                        </div>
+                        <ul>
+                            <li>2021.03 - 2026.02
+                                <p>한국방송통신대학교 컴퓨터과학과</p>
+                            </li>
+                            <li>2020.06
+                                <p>GTQ자격증 1급</p>
+                            </li>
+                            <li>2020.02 - 2020.07
+                                <p>디지털디자인 웹디자인/웹퍼블리셔(반응형ul/ux디자인) 양성과정</p>
+                            </li>
+                            <!-- <li>2014.03 - 2016.01
+                                    <p>경희사이버대학교 문화예술경영학과</p>
+                                </li> -->
+                        </ul>
+                    </section>
 
 
-                        <!-- STYLE GUIDE & ABOUT ME -->
-                        <!-- <section class="section-style" id="section-style">
+                    <!-- STYLE GUIDE & ABOUT ME -->
+                    <!-- <section class="section-style" id="section-style">
                             <div class="section-top">
                                 <span class="chip">Who I Am</span>
                                 <h3>Style Guide</h3>
                             </div>
                         </section> -->
 
-                        <section class="section-about" id="section-about">
-                            <div class="section-top">
-                                <span class="chip">Learning & Sharing</span>
-                                <h3>My Blog</h3>
-                                <p>search_이라는 이름의 개인 블로그를 운영중.<br>
-                                    학습하는 내용을 기록하거나 업무를 하면서 기록해 두고 싶은 내용을 작성.<br>
-                                </p>
-                                <!-- <a href="https://x-x-search.tistory.com/" target="_blank" class="blog"><span
+                    <section class="section-about" id="section-about">
+                        <div class="section-top">
+                            <h3>My Blog</h3>
+                        </div>
+                        <p>search_이라는 이름의 개인 블로그를 운영중.<br>
+                            학습하는 내용을 기록하거나 업무를 하면서 기록해 두고 싶은 내용을 작성.<br>
+                        </p>
+                        <!-- <a href="https://x-x-search.tistory.com/" target="_blank" class="blog"><span
                                         class="icon">🔗</span>
                                     x-x-search.tistory.com</a> -->
-                                <br><br>
+                        <br><br>
 
-                                <!-- <h3>Contact</h3>
+                        <!-- <h3>Contact</h3>
                                 <p class="email"><span class="icon"> ✉</span> gabory_@naver.com</p>
                                 <p class="phone"><span class="icon"> 📞</span> 010-5391-4490</p> -->
-                            </div>
-                        </section>
-                    </div>
+
+                    </section>
                 </div>
             </div>
         </div>
+
 
         <!-- FOOTER -->
         <footer class="footer"><span class="symbol">𐂂</span></footer>
@@ -511,4 +524,5 @@
 </body>
 
 </html>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="./assets/js/ui.js"></script>

@@ -1,5 +1,6 @@
 (function () {
     const init = () => {
+        AOS.init();
         initRollingList();
         initScrollSpy();
         initHeaderFixed();
