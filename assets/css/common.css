@@ -13,10 +13,6 @@
   font-size: 16px;
   transition: all 0.3s ease;
 }
-[class*=btn-]:hover {
-  background-color: #3560f8;
-  border-color: #3560f8;
-}
 [class*=btn-] .icon {
   margin-right: 8px;
 }
@@ -35,9 +31,6 @@
 .link-line em {
   font-size: 22px;
   color: var(--color-pink);
-}
-.link-line:hover {
-  background: linear-gradient(transparent 60%, var(--color-neon-yellow) 40%);
 }
 
 .chip {
@@ -111,12 +104,6 @@ header {
 header .logo a {
   color: var(--color-pink);
 }
-header .logo:hover {
-  background-color: var(--color-pink);
-}
-header .logo:hover a {
-  color: var(--color-white);
-}
 header .logo .name {
   font-weight: 900;
   font-size: 40px;
@@ -172,9 +159,6 @@ header .nav-box a.active::before {
   width: calc(100% - 16px);
   background-color: var(--color-pink);
 }
-header .nav-box a:hover {
-  color: var(--color-pink);
-}
 header .mobile-menu-btn {
   display: none;
 }
@@ -225,11 +209,6 @@ footer {
   color: transparent;
   opacity: 0;
   transition: all 0.3s;
-}
-.box-wrap .box.img-wrap:is(a):hover::after {
-  background-color: var(--color-black);
-  color: var(--color-white);
-  opacity: 0.7;
 }
 .box-wrap .box.text-wrap {
   display: flex;
@@ -662,10 +641,6 @@ section[class*=section-] .section-title {
   width: 300px;
   margin: auto;
 }
-.section-blog .btn-blog:hover {
-  background-color: var(--color-neon-yellow);
-  color: var(--color-gray-900);
-}
 
 .sub-page .inner {
   max-width: 1200px;
@@ -718,6 +693,31 @@ section[class*=section-] .section-title {
   display: none !important;
 }
 
+/*  pc만 hover 적용 */
+@media (hover: hover) and (pointer: fine) {
+  [class*=btn-]:hover {
+    background-color: #3560f8;
+    border-color: #3560f8;
+  }
+  .link-line:hover {
+    background: linear-gradient(transparent 60%, var(--color-neon-yellow) 40%);
+  }
+  header .logo:hover a {
+    color: var(--color-neon-green);
+  }
+  header .nav-box a:hover {
+    color: var(--color-pink);
+  }
+  .box-wrap .box.img-wrap:is(a):hover::after {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    opacity: 0.7;
+  }
+  .section-blog .btn-blog:hover {
+    background-color: var(--color-neon-yellow);
+    color: var(--color-gray-900);
+  }
+}
 @media (max-width: 1024px) {
   .pc-show {
     display: none !important;
@@ -1015,5 +1015,13 @@ section[class*=section-] .section-title {
   }
   .sub-page .box-wrap .box.mo-show {
     flex: 1 1 auto;
+  }
+}
+@media (max-width: 600px) {
+  .box-wrap .box.img-wrap {
+    height: 22rem;
+  }
+  .section-work .scroll {
+    max-height: 65rem;
   }
 }
