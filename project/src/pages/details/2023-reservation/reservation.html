@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./pages/includes/head.html', {
+    pageTitle : '𐂂 KIL:Profile',
+    assetsPath : './../../../assets',
+    })
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- header -->
+        @@include('./pages/includes/header.html', {webroot : '../', pageHeader: 'sub-header'})
+        <!--// header  -->
+        <!-- contents -->
+        <main>
+            <section class="container">
+                <!-- 서브 페이지 시작 -->
+                <div class="content">
+                    @@include('pages/details/2023-reservation/reservation_content.html', {webroot : '../', subPageTitle
+                    :
+                    'reservation',})
+                </div>
+                <!--// 서브 페이지 시작 -->
+            </section>
+        </main>
+        <!--// contents -->
+        <!-- footer -->
+        @@include('./pages/includes/footer.html', {webroot : '../'})
+        <!--// footer -->
+    </div>
+    <!-- SCRIPT IMPORT -->
+</body>
+
+</html>
