@@ -1,0 +1,115 @@
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 700;
+    font-display: block;
+    src: local('Pretendard Bold'), url('../fonts/Pretendard-Bold.woff2') format('woff2');
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 600;
+    font-display: block;
+    src: local('Pretendard SemiBold'), url('../fonts/Pretendard-SemiBold.woff2') format('woff2');
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 500;
+    font-display: block;
+    src: local('Pretendard Medium'), url('../fonts/Pretendard-Medium.woff2') format('woff2');
+}
+@font-face {
+    font-family: "Pretendard";
+    font-weight: 400;
+    font-display: block;
+    src: local('Pretendard Regular'), url('../fonts/Pretendard-Regular.woff2') format('woff2');
+}
+
+:root {
+    --color-white: #ffffff;
+    --color-gray-100: #f3f3f3;
+    --color-gray-300: #b0b4b9;
+    --color-gray-600: #666666;
+    --color-gray-900: #333333;
+    --color-black: #000000;
+    --color-neon-yellow: #ebff0a;
+    --color-neon-green: #39ff14;
+    --color-pink: #ff6969;
+    --border-radius: 40px;
+    --font-family: 400 18px/1.4  "Pretendard", sans-serif;
+}
+
+
+/* reset */
+*, ::before, ::after {
+	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    word-break: keep-all;
+}
+html {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+	font: var(--font-family);
+	color: #333;
+	-webkit-text-size-adjust: none;
+}
+img, svg {
+    display: block;
+	max-width: 100%;
+    border: 0;
+}
+button {
+	border: none;
+    outline: none;
+	background-color: transparent;
+    font: inherit;
+	cursor: pointer;
+}
+ul,li,ol{
+    list-style-type: none;
+}
+em,a {
+    text-decoration: none;
+    font: var(--font-family);
+    color: inherit;
+    word-break: keep-all;
+	cursor:pointer;
+}
+:focus {
+    outline: none;
+}
+strong{
+    font-weight: 700;
+}
+.hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+@media (max-width: 1200px){
+    body {
+        font-size: 16px;
+    }
+}
+@media (max-width: 1024px){
+    html {
+        font-size : 62.5%;
+    }
+    body {
+        font-size: 1.6rem;
+        line-height: 1.6;
+    }
+    :root {
+        --border-radius: 3rem;
+    }
+}
