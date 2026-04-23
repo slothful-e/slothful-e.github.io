@@ -1,21 +1,31 @@
 @use 'reset';
-
 //ui style
-[class*='btn-']{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    min-width: 154px;
-    border-radius: 6px;
-    border: 1px solid var(--color-black);
-    background-color: var(--color-black);
-    color: var(--color-white);
-    text-align: center;
-    font-size: 16px;
-    transition: all 0.3s ease; // 부드러운 전환 효과
-    .icon{
-        margin-right: 8px;
+a,button{
+    &[class*='btn-']{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        min-width: 154px;
+        border-radius: 6px;
+        border: 1px solid var(--color-black);
+        background-color: var(--color-black);
+        color: var(--color-white);
+        text-align: center;
+        font-size: 16px;
+        transition: all 0.3s ease; // 부드러운 전환 효과
+        .icon{
+            margin-right: 8px;
+        }
+    }
+}
+.btn{
+    &-wrap{
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        width: 300px;
+        margin: auto;
     }
 }
 .neon-line{
@@ -305,6 +315,11 @@ ul.dash{
                 margin-top: 10px;
             }
         }
+    }
+    .link-wrap{
+        display: flex;
+        align-items: center;
+        gap: 12%;
     }
     .box{
         position: relative;
@@ -627,14 +642,10 @@ section[class*='section-']{
         }
     }
 }
-.section-blog{
+.section-about{
     p{
         margin-bottom: 100px;
         text-align: center;
-    }
-    .btn-blog{
-        width: 300px;
-        margin: auto;
     }
 }
 //sub-page
@@ -698,9 +709,18 @@ section[class*='section-']{
 
 /*  pc만 hover 적용 */
 @media (hover: hover) and (pointer: fine) {
-    [class*='btn-']:hover {
-        background-color: #3560f8;
-        border-color: #3560f8;
+    a,button{
+        &[class*='btn-']{
+            &:hover {
+                background-color: var(--color-neon-yellow);
+                color: var(--color-gray-900);
+            }
+        }
+        &.btn-move:hover {
+            background-color: #3560f8;
+            border-color: #3560f8;
+            color: var(--color-white);
+        }
     }
     .link-line:hover{
         background: linear-gradient(transparent 60%, var(--color-neon-yellow) 40%); // 형광펜 효과
@@ -717,7 +737,7 @@ section[class*='section-']{
         opacity: .7;
         
     }
-    .section-blog .btn-blog:hover {
+    .section-about .btn-blog:hover {
         background-color: var(--color-neon-yellow);
         color: var(--color-gray-900);
     }
@@ -758,7 +778,7 @@ section[class*='section-']{
     header{
         .header{
             &-content{
-                min-height: 7rem;
+                min-height: 6.4rem;
                 margin-right: 0;
             }
             &.sub-header{
@@ -773,7 +793,7 @@ section[class*='section-']{
         .nav-box{
             display: none;
             position: absolute;
-            top: 6.9rem;
+            top: 6.3rem;
             right: -2rem;
             width: 26rem;
             padding: 2rem 2rem 10rem 2rem;

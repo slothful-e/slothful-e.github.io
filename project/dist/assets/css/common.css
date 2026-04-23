@@ -120,7 +120,7 @@ strong {
     --border-radius: 3rem;
   }
 }
-[class*=btn-] {
+a[class*=btn-], button[class*=btn-] {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,8 +134,16 @@ strong {
   font-size: 16px;
   transition: all 0.3s ease;
 }
-[class*=btn-] .icon {
+a[class*=btn-] .icon, button[class*=btn-] .icon {
   margin-right: 8px;
+}
+
+.btn-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 300px;
+  margin: auto;
 }
 
 .neon-line {
@@ -422,6 +430,11 @@ ul.dash li::before {
 }
 .hero .skills-summary li:not(:first-child) {
   margin-top: 10px;
+}
+.hero .link-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12%;
 }
 .hero .box {
   position: relative;
@@ -725,13 +738,9 @@ section[class*=section-] .section-title {
   margin-top: 30px;
 }
 
-.section-blog p {
+.section-about p {
   margin-bottom: 100px;
   text-align: center;
-}
-.section-blog .btn-blog {
-  width: 300px;
-  margin: auto;
 }
 
 .sub-page .inner {
@@ -787,9 +796,14 @@ section[class*=section-] .section-title {
 
 /*  pc만 hover 적용 */
 @media (hover: hover) and (pointer: fine) {
-  [class*=btn-]:hover {
+  a[class*=btn-]:hover, button[class*=btn-]:hover {
+    background-color: var(--color-neon-yellow);
+    color: var(--color-gray-900);
+  }
+  a.btn-move:hover, button.btn-move:hover {
     background-color: #3560f8;
     border-color: #3560f8;
+    color: var(--color-white);
   }
   .link-line:hover {
     background: linear-gradient(transparent 60%, var(--color-neon-yellow) 40%);
@@ -805,7 +819,7 @@ section[class*=section-] .section-title {
     color: var(--color-white);
     opacity: 0.7;
   }
-  .section-blog .btn-blog:hover {
+  .section-about .btn-blog:hover {
     background-color: var(--color-neon-yellow);
     color: var(--color-gray-900);
   }
@@ -843,7 +857,7 @@ section[class*=section-] .section-title {
     padding: 8rem 0;
   }
   header .header-content {
-    min-height: 7rem;
+    min-height: 6.4rem;
     margin-right: 0;
   }
   header .header.sub-header .btn-move.pc-show {
@@ -855,7 +869,7 @@ section[class*=section-] .section-title {
   header .nav-box {
     display: none;
     position: absolute;
-    top: 6.9rem;
+    top: 6.3rem;
     right: -2rem;
     width: 26rem;
     padding: 2rem 2rem 10rem 2rem;
