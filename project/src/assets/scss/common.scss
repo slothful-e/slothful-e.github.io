@@ -750,9 +750,11 @@ section[class*='section-']{
     .mo-show{
         display: flex !important;
     }
-    [class*=btn-] {
-        height: 4.6rem;
-    }    
+    a,button{
+        &[class*='btn-']{
+            height: 4.6rem;
+        }
+        }
     h2{
         font-size: 2.6rem;
         line-height: 1.4;
@@ -838,8 +840,8 @@ section[class*='section-']{
                 justify-content: center;
                 align-items: center;
                 gap: .6rem;
-                width: 5rem;
-                height: 5rem;
+                width: 4.2rem;
+                height: 4.2rem;
                 border-radius: 8px;
                 border: 1px solid var(--color-pink);
                 &::after,&::before{
