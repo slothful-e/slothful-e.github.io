@@ -1,7 +1,7 @@
 {
-  "name": "DKBMC",
+  "name": "𐂂 KIL:Profile",
   "version": "1.0.0",
-  "description": "DKBMC",
+  "description": "𐂂 KIL:Profile",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": ""
   },
-  "author": "DKBMC",
+  "author": "𐂂 KIL:Profile",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.15.0",
