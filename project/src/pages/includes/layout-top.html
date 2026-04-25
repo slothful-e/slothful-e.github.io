@@ -4,14 +4,15 @@
 <head>
     @@include('pages/includes/head.html', {
     pageTitle : 'KIL:Profile',
-    assetsPath : '@@assetsPath',
+    assetsPath : '@@assetsPath'
     })
 </head>
 
 <body>
     <div class="wrap">
         <!-- header -->
-        @@include('pages/includes/header.html', {webroot : '../'})
+        @@include('pages/includes/header.html', {webroot : '../',
+        pageHeader : '@@pageHeader'})
         <!--// header  -->
         <!-- contents -->
         <main>
