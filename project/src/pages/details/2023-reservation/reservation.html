@@ -1,36 +1,66 @@
-<!DOCTYPE html>
-<html lang="ko">
+@@include('pages/includes/layout-top.html', {webroot : '../', assetsPath : './../../../assets',})
 
-<head>
-    @@include('./pages/includes/head.html', {
-    pageTitle : 'KIL:Profile',
-    assetsPath : './../../../assets',
-    })
-</head>
+<div class="sub-page">
+    <div class="inner">
+        <div class="project-header">
+            <h2>reservation</h2>
+        </div>
 
-<body>
-    <div class="wrap">
-        <!-- header -->
-        @@include('./pages/includes/header.html', {webroot : '../', pageHeader: 'sub-header'})
-        <!--// header  -->
-        <!-- contents -->
-        <main>
-            <section class="container">
-                <!-- 서브 페이지 시작 -->
-                <div class="content">
-                    @@include('pages/details/2023-reservation/reservation_content.html', {webroot : '../', subPageTitle
-                    :
-                    'reservation',})
+        <ul class="project-info dash">
+            <li>디케이비엠씨 사내 QnA 사이트</li>
+            <li>pc / 모바일 반응형</li>
+            <li>HTML / SCSS / jQuery</li>
+            <li>기여도 100%</li>
+            <li>Github 사용 개발자와 협업을 통한 업무 진행</li>
+            <li>login / main / 각 건물 층마다 작업 / 팝업 - 7페이지 작업</li>
+        </ul>
+
+        <ul class="project-list">
+            <li class="box-wrap">
+                <h3>메인</h3>
+                <div class="box pc-show">
+                    <img src="../../../assets/images/reservation/page1.png" alt="피씨 화면">
                 </div>
-                <!--// 서브 페이지 시작 -->
-            </section>
-        </main>
-        <!--// contents -->
-        <!-- footer -->
-        @@include('./pages/includes/footer.html', {webroot : '../'})
-        <!--// footer -->
-    </div>
-    <!-- SCRIPT IMPORT -->
-</body>
+                <div class="box mo-show">
+                    <img src="../../../assets/images/reservation/page1-mo.png" alt="모바일 화면">
+                </div>
+            </li>
 
-</html>
+            <li class="box-wrap">
+                <h3>석수빌딩 2층</h3>
+                <div class="box pc-show">
+                    <img src="../../../assets/images/reservation/page3.png" alt="피씨 화면">
+                </div>
+                <div class="box mo-show">
+                    <img src="../../../assets/images/reservation/page3-mo.png" alt="모바일 화면">
+                </div>
+            </li>
+        </ul>
+
+        <p class="project-text">
+            업무 환경의 유연성과 효율성을 높이기 위해 사내 자리 예약제 사이트를 만들었습니다.<br>
+            이 시스템은 파견 근무, 부서 이동, 임시 좌석 사용 등 다양한 상황에서
+            직원들이 손쉽게 좌석을 확인하고 예약할 수 있도록 돕습니다.
+        </p>
+
+        <div class="project-type">
+            <h4>주요 기능</h4>
+            <ul class="dash">
+                <li>실시간 좌석 현황 확인</li>
+                <li>원하는 날짜·시간대에 간편하게 자리 예약</li>
+                <li>파견 시 외부 근무지 좌석도 확인 가능</li>
+            </ul>
+        </div>
+
+        <div class="project-type">
+            <h4>기대 효과</h4>
+            <ul class="dash">
+                <li>좌석 중복 사용 방지</li>
+                <li>파견 및 임시근무 시 자리 확인 부담 감소</li>
+                <li>효율적인 사내 공간 관리</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+@@include('pages/includes/layout-bottom.html', {webroot : '../'})
