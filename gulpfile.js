@@ -61,8 +61,7 @@ function liveServer(){
 function html(){
 	return src([
 		paths.html,
-		'!./project/src/pages/includes/*',
-		'!./project/src/pages/**/*_content.html'
+		'!./project/src/pages/includes/*'
 	])
 	.pipe(fileinclude({
 		prefix:'@@',
