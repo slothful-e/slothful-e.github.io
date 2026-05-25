@@ -748,15 +748,8 @@ section[class*='section-']{
 
 /*  pc만 hover 적용 */
 @media (hover: hover) and (pointer: fine) {
-    a,button{
-        &[class*='btn-']{
-            &:hover {
-                .link-line{
-                    background: linear-gradient(transparent 78%, var(--color-neon-yellow) 40%); // 형광펜 효과
-                }
-            }
-        }
-        &.btn-lg{
+    .btn{
+        &-lg{
             &:hover {
                 background-color: var(--color-neon-yellow);
                 color: var(--color-gray-900);
@@ -765,6 +758,13 @@ section[class*='section-']{
                 background-color: #3560f8;
                 border-color: #3560f8;
                 color: var(--color-white);
+            }
+        }
+        &-md{
+            &:hover {
+                .link-line{
+                    background: linear-gradient(transparent 78%, var(--color-neon-yellow) 40%); // 형광펜 효과
+                }
             }
         }
     }

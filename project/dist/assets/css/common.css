@@ -836,17 +836,17 @@ section[class*=section-] .section-title {
 
 /*  pc만 hover 적용 */
 @media (hover: hover) and (pointer: fine) {
-  a[class*=btn-]:hover .link-line, button[class*=btn-]:hover .link-line {
-    background: linear-gradient(transparent 78%, var(--color-neon-yellow) 40%);
-  }
-  a.btn-lg:hover, button.btn-lg:hover {
+  .btn-lg:hover {
     background-color: var(--color-neon-yellow);
     color: var(--color-gray-900);
   }
-  a.btn-lg.move:hover, button.btn-lg.move:hover {
+  .btn-lg.move:hover {
     background-color: #3560f8;
     border-color: #3560f8;
     color: var(--color-white);
+  }
+  .btn-md:hover .link-line {
+    background: linear-gradient(transparent 78%, var(--color-neon-yellow) 40%);
   }
   header .logo:hover a {
     color: var(--color-neon-green);
