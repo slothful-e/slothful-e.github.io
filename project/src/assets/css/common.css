@@ -100,7 +100,8 @@ strong {
   padding: 0;
   border: 0;
   white-space: nowrap;
-  clip-path: polygon(0 0, 0 0, 0 0);
+  -webkit-clip-path: polygon(0 0, 0 0, 0 0);
+          clip-path: polygon(0 0, 0 0, 0 0);
 }
 
 @media (max-width: 1200px) {
@@ -524,10 +525,12 @@ ul.dash li::before {
   opacity: 1;
 }
 .hero .box.right .rolling-list li.out {
-  animation-name: roll-out;
+  -webkit-animation-name: roll-out;
+          animation-name: roll-out;
 }
 .hero .box.right .rolling-list li.in {
-  animation-name: roll-in;
+  -webkit-animation-name: roll-in;
+          animation-name: roll-in;
 }
 .hero .box.right .rolling-list li .img {
   display: flex;
@@ -596,14 +599,26 @@ ul.dash li::before {
   font-size: 4rem;
   text-anchor: middle;
   dominant-baseline: middle;
-  animation: bounce 1.5s infinite ease-in-out;
+  -webkit-animation: bounce 1.5s infinite ease-in-out;
+          animation: bounce 1.5s infinite ease-in-out;
 }
 .hero .circle text {
   font-size: 26px;
 }
 .hero .circle .rotating-text {
-  animation: rotateCircle 10s linear infinite;
+  -webkit-animation: rotateCircle 10s linear infinite;
+          animation: rotateCircle 10s linear infinite;
   transform-origin: 150px 150px; /* SVG 중앙 기준으로 회전 */
+}
+@-webkit-keyframes roll-in {
+  from {
+    filter: blur(10px);
+    opacity: 0;
+  }
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
 }
 @keyframes roll-in {
   from {
@@ -613,6 +628,16 @@ ul.dash li::before {
   to {
     filter: blur(0);
     opacity: 1;
+  }
+}
+@-webkit-keyframes roll-out {
+  0% {
+    filter: blur(0);
+    opacity: 1;
+  }
+  100% {
+    filter: blur(10px);
+    opacity: 0;
   }
 }
 @keyframes roll-out {
@@ -625,12 +650,31 @@ ul.dash li::before {
     opacity: 0;
   }
 }
+@-webkit-keyframes rotateCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes rotateCircle {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
   }
 }
 @keyframes bounce {
@@ -725,7 +769,8 @@ section[class*=section-] .section-title {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  column-gap: 12px;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
   padding: 20px 0;
 }
 .section-work .scroll {
@@ -995,8 +1040,10 @@ section[class*=section-] .section-title {
     height: 100%;
     min-height: auto;
     width: 100%;
-    object-fit: cover;
-    object-position: top;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
   }
   ul.dash li::before {
     top: 1rem;
@@ -1005,7 +1052,7 @@ section[class*=section-] .section-title {
     margin: 0;
   }
   .hero .box-wrap::before,
-  .hero .box.right::after, .hero .box.right::before {
+.hero .box.right::after, .hero .box.right::before {
     display: none;
   }
   .hero .title-wrap {

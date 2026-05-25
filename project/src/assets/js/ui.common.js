@@ -67,20 +67,29 @@
         if (menuLinks.length === 0) return;
 
         const sections = [...menuLinks]
-            .map(link => document.querySelector(link.getAttribute("href")))
+            .map(link => {
+                const href = link.getAttribute("href");
+
+                if (!href || !href.startsWith("#")) return null;
+
+                return document.querySelector(href);
+            })
             .filter(Boolean);
 
         // 스무스 스크롤
         menuLinks.forEach(link => {
-            link.addEventListener("click", function (e) {
-                const target = document.querySelector(this.getAttribute("href"));
-                if (!target) return;
-
+            link.addEventListener("click", (e) => {
+                const href = link.getAttribute("href");
+        
+                if (!href || !href.startsWith("#")) return;
+        
                 e.preventDefault();
-
-                const top = target.offsetTop;
+        
+                const target = document.querySelector(href);
+                if (!target) return;
+        
                 window.scrollTo({
-                    top: top,
+                    top: target.offsetTop,
                     behavior: "smooth"
                 });
             });

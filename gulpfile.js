@@ -136,7 +136,7 @@ function fonts(){
 // ---------------- watch ----------------
 // 지정한 파일, 경로에 대해 실시간 파일 변경 감지
 function watcher(){
-	watch(paths.html, html);
+	watch('./project/src/**/*.html', html);
 	watch(paths.pdf, pdf);
 	watch('./project/src/assets/scss/**/*.scss', styles);
 	watch(paths.js, scripts);

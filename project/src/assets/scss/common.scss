@@ -14,6 +14,7 @@ a,button{
         text-align: center;
         font-size: 16px;
         transition: all 0.3s ease; // 부드러운 전환 효과
+        overflow: hidden;
         .icon{
             margin-right: 8px;
         }
@@ -27,26 +28,37 @@ a,button{
         width: 300px;
         margin: auto;
     }
+    &-md{
+        height: 40px !important;
+        min-width: auto !important;
+        padding: 0 6px;
+        margin: 0;
+        .icon{
+            width: 40px;
+            height: 40px;
+            margin-right: 0 !important;
+            font-size: 30px;
+            &.github{
+                background: var(--color-white) url("../images/icon/icon-github.png") no-repeat center/cover;
+                border-radius: 20px;
+            }
+        }
+        em{
+            padding: 0 6px;
+        }
+    }
 }
 .neon-line{
     font-weight: 600;
     color: var(--color-black);
-    background: linear-gradient(transparent 60%, var(--color-neon-green) 40%); // 형광펜 효과
+    background: linear-gradient(transparent 78%, var(--color-neon-green) 40%); // 형광펜 효과
     padding: 0 2px;
-}
-.link-line{
-    font-size: 20px;
-    font-weight: bold;
-    em{
-        font-size: 22px;
-        color: var(--color-pink);
-    }
 }
 .chip{
     display: inline-block;
     vertical-align: middle;
     padding: 4px 14px;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: var(--color-gray-600);
     color: var(--color-neon-yellow);
     font-size: 14px;
@@ -56,8 +68,8 @@ a,button{
     flex-wrap: wrap;
     gap: 8px 6px;
     li{
-        padding: 10px 14px;
-        border-radius: 12px;
+        padding: 8px 14px;
+        border-radius: 20px;
         // border: 1px solid var(--color-neon-yellow);
         background-color: var(--color-neon-yellow);
         color: var(--color-gray-900);
@@ -80,7 +92,6 @@ h3{
     font-size: 40px;
     line-height: 1.6;
     &+p{
-        font-size: 20px;
         color: var(--color-gray-600);
     }
 }
@@ -94,8 +105,8 @@ h4{
 }
 .inner{
     position: relative;
-    // max-width: 1540px;
-    max-width: 1624px;
+    max-width: 1540px;
+    //max-width: 1624px;
     margin: auto;
     padding: 0 20px;
 }
@@ -111,6 +122,7 @@ header {
         .name{
         font-weight: 900;
         font-size: 40px;
+        // font-family: "SortsMillGoudy", serif;
         }
     }
     .header{
@@ -273,12 +285,14 @@ ul.dash{
     padding-bottom: 80px;
     margin-bottom: 120px;
     .title-wrap{
-        font-size: 20px;
+        position: relative;
         .title{
             display: flex;
             align-items: center;
             flex-wrap: wrap;
-            margin-top: 12px;
+            position: relative;
+            margin-top: 65px;
+            z-index: 2;
             .highlight{
                 position: relative;
                 margin: 0 16px 0 6px;
@@ -305,9 +319,17 @@ ul.dash{
             }
         }
     }
+    .title-shadow{
+        position: absolute;
+        top: 27px;                   
+        font-weight: 900;
+        font-size: 72px;
+        font-family: SortsMillGoudy, serif;
+        color: var(--color-gray-600);
+        opacity: 0.3;
+    }
     .skills-summary{
         position: relative;
-        font-size: 20px;
         word-break: keep-all;
         z-index: 3;
         li{
@@ -472,6 +494,7 @@ ul.dash{
         font-size: 4rem;
         text-anchor: middle;
         dominant-baseline: middle;
+        animation: bounce 1.5s infinite ease-in-out;
         }
         text {
         font-size: 26px;
@@ -506,10 +529,24 @@ ul.dash{
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
     }
+    @keyframes bounce {
+        0% {
+            transform: translateY(-20px);
+        }
+        50% {
+            transform: translateY(20px);
+        }
+        100% {
+            transform: translateY(-20px);
+        }
+    }
 }
 //main-page
 section[class*='section-']{
     padding: 160px 0 100px;
+    .inner{
+        max-width: 1140px;
+    }
     .section-title{
         margin-bottom: 100px;
         text-align: center;
@@ -529,8 +566,8 @@ section[class*='section-']{
         &:nth-child(3){
             background-color: var(--color-white);
         }
-        p{
-            margin: 20px 0;
+        p,.tags{
+            margin-top: 20px;
         }
     }
 }    
@@ -543,10 +580,10 @@ section[class*='section-']{
         flex-direction: column;
         align-items: center;
         gap: 80px;
-        margin-top: 90px;
+        max-width: 810px;
+        margin: 100px auto;
         text-align: center;
         .career-item{
-            max-width: 810px;
             .date{
                 font-size: 20px;
                 font-weight: 500;
@@ -572,13 +609,14 @@ section[class*='section-']{
                     height: 1px;
                     background-color: var(--color-gray-900);
                 }
+                &:not(:first-child){
+                    margin-top: 10px;
+                }
             }
         }
     }
     .project-wrap{
-        width: 100%;
-        max-width: 1100px;
-        margin: 100px auto 0;   
+        border: 1px solid var(--color-gray-300);
         border-radius: var(--border-radius);
         background-color: var(--color-gray-100);
         overflow: hidden;
@@ -712,18 +750,20 @@ section[class*='section-']{
     a,button{
         &[class*='btn-']{
             &:hover {
-                background-color: var(--color-neon-yellow);
-                color: var(--color-gray-900);
+                .link-line{
+                    background: linear-gradient(transparent 78%, var(--color-neon-yellow) 40%); // 형광펜 효과
+                }
             }
+        }
+        &.btn-neon:hover {
+            background-color: var(--color-neon-yellow);
+            color: var(--color-gray-900);
         }
         &.btn-move:hover {
             background-color: #3560f8;
             border-color: #3560f8;
             color: var(--color-white);
         }
-    }
-    .link-line:hover{
-        background: linear-gradient(transparent 60%, var(--color-neon-yellow) 40%); // 형광펜 효과
     }
     header .logo:hover a{
         color: var(--color-neon-green)
@@ -735,7 +775,6 @@ section[class*='section-']{
         background-color: var(--color-black);
         color: var(--color-white);
         opacity: .7;
-        
     }
     .section-about .btn-blog:hover {
         background-color: var(--color-neon-yellow);
@@ -769,7 +808,7 @@ section[class*='section-']{
         font-size: 2.2rem;
     }
     .link-line{
-        background: linear-gradient(transparent 60%, var(--color-neon-yellow) 40%); // 형광펜 효과
+        background: linear-gradient(transparent 80%, var(--color-neon-yellow) 40%); // 형광펜 효과
     }
     .inner{
         padding: 0 2rem;
@@ -923,10 +962,15 @@ section[class*='section-']{
 
                 }
             }
+            .title-shadow{
+                left: 2rem;
+                top: 7rem;
+                font-size: 5rem;
+                line-height: 1;
+            }
         }
         .skills-summary{
-            margin: 5.2rem 0 3rem;
-            font-size: 1.8rem;
+            margin: 7.2rem 0 3rem;
         }
         .box-wrap{
             flex-direction: column-reverse;
