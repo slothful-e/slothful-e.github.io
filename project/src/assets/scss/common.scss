@@ -16,29 +16,29 @@
     min-width: 154px;
 }
 .btn{
-    @extend %btn-base;
     &-wrap{
         display: flex;
         flex-direction: column;
         gap: 14px;
-        width: 300px;
+        max-width: 330px;
         margin: auto;
     }
     &-lg{
+        @extend %btn-base;
         .icon {
             margin-right: 8px;
         }
     }
     &-md{
+        @extend %btn-base;
         height: 40px;
         min-width: auto;
-        padding: 0 6px;
-        margin: 0;
+        padding: 2px 6px;
+        background-color: var(--color-gray-900);
         .icon{
-            width: 40px;
-            height: 40px;
-            margin-right: 0 !important;
-            font-size: 30px;
+            width: 36px;
+            height: 36px;
+            font-size: 24px;
             &.github{
                 background: var(--color-white) url("../images/icon/icon-github.png") no-repeat center/cover;
                 border-radius: 20px;
@@ -46,6 +46,7 @@
         }
         em{
             padding: 0 6px;
+            font-size: 16px;
         }
     }
 }
@@ -322,12 +323,12 @@ ul.dash{
     }
     .title-shadow{
         position: absolute;
-        top: 27px;                   
-        font-weight: 900;
-        font-size: 72px;
-        font-family: SortsMillGoudy, serif;
+        top: 50px;            
+        font-size: 80px;
+        font-family: Fraunces, serif;
         color: var(--color-gray-600);
         opacity: 0.3;
+        line-height: 1;
     }
     .skills-summary{
         position: relative;
@@ -659,11 +660,11 @@ section[class*='section-']{
     }
 }
 .section-career{
+    max-width: 800px;
+    margin: 0 auto;
     .career-text{
-        max-width: 800px;
         word-break: keep-all;
         text-align: left;
-        margin: 0 auto;
         &:not(:last-child){
             margin-bottom: 20px;
         }
@@ -763,16 +764,18 @@ section[class*='section-']{
         &-md{
             &:hover {
                 .link-line{
-                    background: linear-gradient(transparent 78%, var(--color-neon-yellow) 40%); // 형광펜 효과
+                    background: linear-gradient(transparent 87%, var(--color-neon-yellow) 40%); // 형광펜 효과
                 }
             }
         }
     }
-    header .logo:hover a{
-        color: var(--color-neon-green)
-    }
-    header .nav-box a:hover{
-        color: var(--color-pink);
+    header{
+        .logo:hover a{
+            color: var(--color-neon-green)
+        }
+        .nav-box a:hover{
+            color: var(--color-pink);
+        }
     }
     .box-wrap .box.img-wrap:is(a):hover::after{
         background-color: var(--color-black);
@@ -967,9 +970,8 @@ section[class*='section-']{
             }
             .title-shadow{
                 left: 2rem;
-                top: 7rem;
-                font-size: 5rem;
-                line-height: 1;
+                top: 10rem;
+                font-size: 6rem;
             }
         }
         .skills-summary{
@@ -1080,9 +1082,6 @@ section[class*='section-']{
         .button-wrap{
             margin-top: 2rem;
         }
-    }
-    .section-career,.section-certificate,.section-about{
-        margin: 0 3.8rem;
     }
     .section-certificate{
         .certificate-list{

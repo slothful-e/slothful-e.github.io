@@ -29,6 +29,12 @@
   font-style: normal;
   src: url("../fonts/SortsMillGoudy-Regular.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Fraunces";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Fraunces-Regular.ttf") format("truetype");
+}
 :root {
   --color-white: #ffffff;
   --color-gray-100: #f3f3f3;
@@ -126,7 +132,7 @@ strong {
     --border-radius: 3rem;
   }
 }
-.btn {
+.btn-md, .btn-lg {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -146,7 +152,7 @@ strong {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  width: 300px;
+  max-width: 330px;
   margin: auto;
 }
 .btn-lg .icon {
@@ -155,14 +161,13 @@ strong {
 .btn-md {
   height: 40px;
   min-width: auto;
-  padding: 0 6px;
-  margin: 0;
+  padding: 2px 6px;
+  background-color: var(--color-gray-900);
 }
 .btn-md .icon {
-  width: 40px;
-  height: 40px;
-  margin-right: 0 !important;
-  font-size: 30px;
+  width: 36px;
+  height: 36px;
+  font-size: 24px;
 }
 .btn-md .icon.github {
   background: var(--color-white) url("../images/icon/icon-github.png") no-repeat center/cover;
@@ -170,6 +175,7 @@ strong {
 }
 .btn-md em {
   padding: 0 6px;
+  font-size: 16px;
 }
 
 .neon-line {
@@ -442,12 +448,12 @@ ul.dash li::before {
 }
 .hero .title-shadow {
   position: absolute;
-  top: 27px;
-  font-weight: 900;
-  font-size: 72px;
-  font-family: SortsMillGoudy, serif;
+  top: 50px;
+  font-size: 80px;
+  font-family: Fraunces, serif;
   color: var(--color-gray-600);
   opacity: 0.3;
+  line-height: 1;
 }
 .hero .skills-summary {
   position: relative;
@@ -757,11 +763,13 @@ section[class*=section-] .section-title {
   margin: 80px auto 0;
 }
 
-.section-career .career-text {
+.section-career {
   max-width: 800px;
+  margin: 0 auto;
+}
+.section-career .career-text {
   word-break: keep-all;
   text-align: left;
-  margin: 0 auto;
 }
 .section-career .career-text:not(:last-child) {
   margin-bottom: 20px;
@@ -846,7 +854,7 @@ section[class*=section-] .section-title {
     color: var(--color-white);
   }
   .btn-md:hover .link-line {
-    background: linear-gradient(transparent 78%, var(--color-neon-yellow) 40%);
+    background: linear-gradient(transparent 87%, var(--color-neon-yellow) 40%);
   }
   header .logo:hover a {
     color: var(--color-neon-green);
@@ -1031,9 +1039,8 @@ section[class*=section-] .section-title {
   }
   .hero .title-wrap .title-shadow {
     left: 2rem;
-    top: 7rem;
-    font-size: 5rem;
-    line-height: 1;
+    top: 10rem;
+    font-size: 6rem;
   }
   .hero .skills-summary {
     margin: 7.2rem 0 3rem;
@@ -1132,9 +1139,6 @@ section[class*=section-] .section-title {
   }
   .section-work .button-wrap {
     margin-top: 2rem;
-  }
-  .section-career, .section-certificate, .section-about {
-    margin: 0 3.8rem;
   }
   .section-certificate .certificate-list {
     width: 100%;
