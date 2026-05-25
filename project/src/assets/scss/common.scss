@@ -1,6 +1,6 @@
 @use 'reset';
 //ui style
-[class*='btn']{
+%btn-base{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,6 +14,9 @@
     overflow: hidden;
     height: 50px;
     min-width: 154px;
+}
+.btn{
+    @extend %btn-base;
     &-wrap{
         display: flex;
         flex-direction: column;

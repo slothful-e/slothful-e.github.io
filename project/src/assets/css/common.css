@@ -23,10 +23,16 @@
   font-display: block;
   src: local("Pretendard Regular"), url("../fonts/Pretendard-Regular.woff2") format("woff2");
 }
+@font-face {
+  font-family: "SortsMillGoudy";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/SortsMillGoudy-Regular.ttf") format("truetype");
+}
 :root {
   --color-white: #ffffff;
   --color-gray-100: #f3f3f3;
-  --color-gray-300: #b0b4b9;
+  --color-gray-300: #a0a3a7;
   --color-gray-600: #666666;
   --color-gray-900: #333333;
   --color-black: #000000;
@@ -34,7 +40,7 @@
   --color-neon-green: #39ff14;
   --color-pink: #ff6969;
   --border-radius: 40px;
-  --font-family: 400 18px/1.4 "Pretendard", sans-serif;
+  --font-family: 400 18px/1.6 "Pretendard", sans-serif;
 }
 
 /* reset */
@@ -121,12 +127,10 @@ strong {
     --border-radius: 3rem;
   }
 }
-a[class*=btn-], button[class*=btn-] {
+.btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
-  min-width: 154px;
   border-radius: 6px;
   border: 1px solid var(--color-black);
   background-color: var(--color-black);
@@ -135,9 +139,8 @@ a[class*=btn-], button[class*=btn-] {
   font-size: 16px;
   transition: all 0.3s ease;
   overflow: hidden;
-}
-a[class*=btn-] .icon, button[class*=btn-] .icon {
-  margin-right: 8px;
+  height: 50px;
+  min-width: 154px;
 }
 
 .btn-wrap {
@@ -147,9 +150,12 @@ a[class*=btn-] .icon, button[class*=btn-] .icon {
   width: 300px;
   margin: auto;
 }
+.btn-lg .icon {
+  margin-right: 8px;
+}
 .btn-md {
-  height: 40px !important;
-  min-width: auto !important;
+  height: 40px;
+  min-width: auto;
   padding: 0 6px;
   margin: 0;
 }
@@ -170,7 +176,7 @@ a[class*=btn-] .icon, button[class*=btn-] .icon {
 .neon-line {
   font-weight: 600;
   color: var(--color-black);
-  background: linear-gradient(transparent 78%, var(--color-neon-green) 40%);
+  background: linear-gradient(transparent 60%, var(--color-neon-green) 40%);
   padding: 0 2px;
 }
 
@@ -878,11 +884,11 @@ section[class*=section-] .section-title {
   a[class*=btn-]:hover .link-line, button[class*=btn-]:hover .link-line {
     background: linear-gradient(transparent 78%, var(--color-neon-yellow) 40%);
   }
-  a.btn-neon:hover, button.btn-neon:hover {
+  a.btn-lg:hover, button.btn-lg:hover {
     background-color: var(--color-neon-yellow);
     color: var(--color-gray-900);
   }
-  a.btn-move:hover, button.btn-move:hover {
+  a.btn-lg.move:hover, button.btn-lg.move:hover {
     background-color: #3560f8;
     border-color: #3560f8;
     color: var(--color-white);
@@ -939,7 +945,7 @@ section[class*=section-] .section-title {
     min-height: 6.4rem;
     margin-right: 0;
   }
-  header .header.sub-header .btn-move.pc-show {
+  header .header.sub-header .btn-lg.pc-show {
     display: flex !important;
   }
   header .logo .name {
@@ -975,7 +981,7 @@ section[class*=section-] .section-title {
   header .nav-box nav a {
     font-size: 1.8rem;
   }
-  header .nav-box .btn-move {
+  header .nav-box .btn-lg {
     position: absolute;
     bottom: 2rem;
     right: 2rem;
