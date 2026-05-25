@@ -1,26 +1,19 @@
 @use 'reset';
 //ui style
-a,button{
-    &[class*='btn-']{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 50px;
-        min-width: 154px;
-        border-radius: 6px;
-        border: 1px solid var(--color-black);
-        background-color: var(--color-black);
-        color: var(--color-white);
-        text-align: center;
-        font-size: 16px;
-        transition: all 0.3s ease; // 부드러운 전환 효과
-        overflow: hidden;
-        .icon{
-            margin-right: 8px;
-        }
-    }
-}
-.btn{
+[class*='btn']{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border: 1px solid var(--color-black);
+    background-color: var(--color-black);
+    color: var(--color-white);
+    text-align: center;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    height: 50px;
+    min-width: 154px;
     &-wrap{
         display: flex;
         flex-direction: column;
@@ -28,9 +21,14 @@ a,button{
         width: 300px;
         margin: auto;
     }
+    &-lg{
+        .icon {
+            margin-right: 8px;
+        }
+    }
     &-md{
-        height: 40px !important;
-        min-width: auto !important;
+        height: 40px;
+        min-width: auto;
         padding: 0 6px;
         margin: 0;
         .icon{
@@ -51,7 +49,7 @@ a,button{
 .neon-line{
     font-weight: 600;
     color: var(--color-black);
-    background: linear-gradient(transparent 78%, var(--color-neon-green) 40%); // 형광펜 효과
+    background: linear-gradient(transparent 60%, var(--color-neon-green) 40%); // 형광펜 효과
     padding: 0 2px;
 }
 .chip{
@@ -755,14 +753,16 @@ section[class*='section-']{
                 }
             }
         }
-        &.btn-neon:hover {
-            background-color: var(--color-neon-yellow);
-            color: var(--color-gray-900);
-        }
-        &.btn-move:hover {
-            background-color: #3560f8;
-            border-color: #3560f8;
-            color: var(--color-white);
+        &.btn-lg{
+            &:hover {
+                background-color: var(--color-neon-yellow);
+                color: var(--color-gray-900);
+            }
+            &.move:hover {
+                background-color: #3560f8;
+                border-color: #3560f8;
+                color: var(--color-white);
+            }
         }
     }
     header .logo:hover a{
@@ -823,7 +823,7 @@ section[class*='section-']{
                 margin-right: 0;
             }
             &.sub-header{
-                .btn-move.pc-show{
+                .btn-lg.pc-show{
                     display: flex !important;
                 }
             }
@@ -862,7 +862,7 @@ section[class*='section-']{
                     font-size: 1.8rem;
                 }
             } 
-            .btn-move{
+            .btn-lg{
                 position: absolute;
                 bottom: 2rem;
                 right: 2rem; 
