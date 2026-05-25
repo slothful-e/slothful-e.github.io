@@ -23,11 +23,16 @@
     font-display: block;
     src: local('Pretendard Regular'), url('../fonts/Pretendard-Regular.woff2') format('woff2');
 }
-
+@font-face {
+    font-family: "SortsMillGoudy";
+    font-weight: 400;
+    font-style: normal;
+    src: url("../fonts/SortsMillGoudy-Regular.ttf") format("truetype");
+}
 :root {
     --color-white: #ffffff;
     --color-gray-100: #f3f3f3;
-    --color-gray-300: #b0b4b9;
+    --color-gray-300: #a0a3a7;
     --color-gray-600: #666666;
     --color-gray-900: #333333;
     --color-black: #000000;
@@ -35,7 +40,7 @@
     --color-neon-green: #39ff14;
     --color-pink: #ff6969;
     --border-radius: 40px;
-    --font-family: 400 18px/1.4  "Pretendard", sans-serif;
+    --font-family: 400 18px/1.6  "Pretendard", sans-serif;
 }
 
 
