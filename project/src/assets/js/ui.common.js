@@ -62,53 +62,62 @@
      * Smooth Scroll + Scroll Spy
      * ----------------------------------------------------- */
     const initScrollSpy = () => {
-        // ⬇ div.nav > a 를 잡는다.
-        const menuLinks = document.querySelectorAll(".nav a");
-        if (menuLinks.length === 0) return;
-
+        const menuLinks = document.querySelectorAll("nav .nav a");
+        if (!menuLinks.length) return;
         const sections = [...menuLinks]
             .map(link => {
                 const href = link.getAttribute("href");
-
-                if (!href || !href.startsWith("#")) return null;
-
+                if (!href?.startsWith("#")) return null;
                 return document.querySelector(href);
             })
             .filter(Boolean);
-
-        // 스무스 스크롤
+    
+        const getHeaderOffset = () => {
+            const header = document.querySelector(".header");
+            return header ? header.offsetHeight : 0;
+        };
+    
+        // 클릭 스크롤
         menuLinks.forEach(link => {
             link.addEventListener("click", (e) => {
                 const href = link.getAttribute("href");
-        
-                if (!href || !href.startsWith("#")) return;
-        
+                if (!href?.startsWith("#")) return;
                 e.preventDefault();
-        
                 const target = document.querySelector(href);
                 if (!target) return;
-        
                 window.scrollTo({
-                    top: target.offsetTop,
+                    top: target.offsetTop - getHeaderOffset(),
                     behavior: "smooth"
                 });
             });
         });
-
-        // 스크롤 스파이
-        window.addEventListener("scroll", () => {
-            let scrollPos = window.pageYOffset + 200;
-
-            sections.forEach((sec, index) => {
-                const secTop = sec.offsetTop;
-                const secBottom = secTop + sec.offsetHeight;
-
-                if (scrollPos >= secTop && scrollPos < secBottom) {
-                    menuLinks.forEach(a => a.classList.remove("active"));
-                    menuLinks[index].classList.add("active");
+    
+        // active 처리
+        const activateMenu = () => {
+            const triggerPoint = getHeaderOffset() + 40;
+            let currentSection = "";
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (
+                    rect.top <= triggerPoint &&
+                    rect.bottom >= triggerPoint
+                ) {
+                    currentSection = section.id;
                 }
             });
-        });
+    
+            menuLinks.forEach(link => {
+                link.classList.remove("active");
+                if (
+                    link.getAttribute("href") === `#${currentSection}`
+                ) {
+                    link.classList.add("active");
+                }
+            });
+        };
+    
+        window.addEventListener("scroll", activateMenu);
+        activateMenu();
     };
 
      /* -----------------------------------------------------

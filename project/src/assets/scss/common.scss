@@ -38,6 +38,7 @@
         .icon{
             width: 36px;
             height: 36px;
+            margin-right: 6px;
             font-size: 24px;
             &.github{
                 background: var(--color-white) url("../images/icon/icon-github.png") no-repeat center/cover;
@@ -660,8 +661,11 @@ section[class*='section-']{
     }
 }
 .section-career{
-    max-width: 800px;
-    margin: 0 auto;
+    background-color: var(--color-gray-100);
+    .career-summary{
+        max-width: 800px;
+        margin: 0 auto;
+    }
     .career-text{
         word-break: keep-all;
         text-align: left;
@@ -969,8 +973,8 @@ section[class*='section-']{
                 }
             }
             .title-shadow{
-                left: 2rem;
-                top: 10rem;
+                left: 1rem;
+                top: 8rem;
                 font-size: 6rem;
             }
         }

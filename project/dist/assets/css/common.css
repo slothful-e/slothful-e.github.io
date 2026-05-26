@@ -167,6 +167,7 @@ strong {
 .btn-md .icon {
   width: 36px;
   height: 36px;
+  margin-right: 6px;
   font-size: 24px;
 }
 .btn-md .icon.github {
@@ -764,6 +765,9 @@ section[class*=section-] .section-title {
 }
 
 .section-career {
+  background-color: var(--color-gray-100);
+}
+.section-career .career-summary {
   max-width: 800px;
   margin: 0 auto;
 }
@@ -1038,8 +1042,8 @@ section[class*=section-] .section-title {
     font-size: 1.8rem;
   }
   .hero .title-wrap .title-shadow {
-    left: 2rem;
-    top: 10rem;
+    left: 1rem;
+    top: 8rem;
     font-size: 6rem;
   }
   .hero .skills-summary {
