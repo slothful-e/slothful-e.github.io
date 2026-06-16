@@ -715,12 +715,15 @@ section[class*='section-']{
     }
     .scroll{
         max-height: 820px;
+        border-radius: 20px;
         iframe{
+            display: block;
             overflow: hidden !important;
             border: 0;
             html,body {
                 overflow: hidden !important;
                 border: 0;
+                background-color: var(--color-black);
             }
         }
     }
@@ -729,6 +732,19 @@ section[class*='section-']{
             display: flex;
             gap: 20px;
             align-items: center;
+        }
+        &-img{
+            position: relative;
+            .radius-before,.radius-after{
+                position: absolute;
+                top: 0;
+                right: 16px;
+                z-index: 1;
+            }
+            .radius-after{
+            top: auto;
+            bottom: 0;
+            }
         }
         &-text{
             h4+p{

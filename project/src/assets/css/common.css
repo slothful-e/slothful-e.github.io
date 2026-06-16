@@ -865,19 +865,35 @@ section[class*=section-] .section-title {
 }
 .section-sideProjects .scroll {
   max-height: 820px;
+  border-radius: 20px;
 }
 .section-sideProjects .scroll iframe {
+  display: block;
   overflow: hidden !important;
   border: 0;
 }
 .section-sideProjects .scroll iframe html, .section-sideProjects .scroll iframe body {
   overflow: hidden !important;
   border: 0;
+  background-color: var(--color-black);
 }
 .section-sideProjects .slideProject-item {
   display: flex;
   gap: 20px;
   align-items: center;
+}
+.section-sideProjects .slideProject-img {
+  position: relative;
+}
+.section-sideProjects .slideProject-img .radius-before, .section-sideProjects .slideProject-img .radius-after {
+  position: absolute;
+  top: 0;
+  right: 16px;
+  z-index: 1;
+}
+.section-sideProjects .slideProject-img .radius-after {
+  top: auto;
+  bottom: 0;
 }
 .section-sideProjects .slideProject-text h4 + p {
   padding: 40px 0;
