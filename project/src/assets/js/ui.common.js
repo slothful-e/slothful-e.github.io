@@ -5,6 +5,7 @@
         initScrollSpy();
         initHeaderFixed();
         initMobileMenu();
+        initSwiper();
     };
 
     /* -----------------------------------------------------
@@ -155,6 +156,28 @@
                 nav.classList.remove("active");
                 btn.classList.remove("active");
             }
+        });
+    };
+
+    const initSwiper = () => {
+        const swiperEl = document.querySelector(".mySwiper");
+    
+        if (!swiperEl || typeof Swiper === "undefined") return;
+    
+        new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+        
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
         });
     };
 

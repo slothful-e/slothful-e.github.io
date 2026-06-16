@@ -204,7 +204,7 @@ footer{
     .box{
         flex: 1;
         padding: 40px;
-        border-radius: var(--border-radius);
+        border-radius: var(--border-radius-2);
         &.img-wrap{
             display: block;
             position: relative;
@@ -344,10 +344,11 @@ ul.dash{
     .link-wrap{
         display: flex;
         align-items: center;
-        gap: 12%;
+        gap: 2%;
     }
     .box{
         position: relative;
+        border-radius: var(--border-radius-4);
         &::after,&::before{
             content: "";
             position: absolute;
@@ -361,7 +362,7 @@ ul.dash{
             justify-content: space-around;
             background-color: var(--color-gray-100);
             &::after,&::before{
-                border-bottom-right-radius: var(--border-radius);
+                border-bottom-right-radius: var(--border-radius-4);
                 background-color: var(--color-gray-100);
             }
             &::before{
@@ -377,7 +378,7 @@ ul.dash{
             padding: 0 40px;
             background-color: var(--color-gray-600);
             &::after,&::before{
-                border-bottom-left-radius: var(--border-radius);
+                border-bottom-left-radius: var(--border-radius-4);
                 background-color: var(--color-gray-600);
             }
             &::before{
@@ -463,7 +464,7 @@ ul.dash{
         position: relative;
         width: 160px;
         height: 160px;
-        border-radius: var(--border-radius);
+        border-radius: var(--border-radius-4);
         background-color: var(--color-white);
         z-index: 6;
         &-wrap{
@@ -620,7 +621,7 @@ section[class*='section-']{
     }
     .project-wrap{
         border: 1px solid var(--color-gray-300);
-        border-radius: var(--border-radius);
+        border-radius: var(--border-radius-2);
         background-color: var(--color-gray-100);
         overflow: hidden;
     }
@@ -686,10 +687,65 @@ section[class*='section-']{
         }
     }
 }
-.section-about{
-    p{
+.section-about,.section-sideProjects{
+    .section-title+p{
         margin-bottom: 100px;
         text-align: center;
+    }
+}
+.section-sideProjects{
+    .swiper {
+        width: 100%;
+        height: 100%;
+        &-slide {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .scroll{
+        max-height: 820px;
+        iframe{
+            overflow: hidden !important;
+            border: 0;
+            html,body {
+                overflow: hidden !important;
+                border: 0;
+            }
+        }
+    }
+    .slideProject{
+        &-item{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        &-text{
+            h4+p{
+                padding: 40px 0;
+            }
+            strong{
+                display: block;
+                padding: 20px 0;
+            }
+            .dash,.tags{
+                max-width: 415px;
+                margin: auto;
+            }
+            .dash{
+                text-align: left;
+            }
+            .btn-wrap{
+                padding-top: 40px;
+            }
+        }
     }
 }
 //sub-page
@@ -713,7 +769,7 @@ section[class*='section-']{
         .box{
             height: 523px;
             border: 1px solid var(--color-gray-300);
-            border-radius: var(--border-radius);
+            border-radius: var(--border-radius-4);
             background-color: var(--color-white);
             &.pc-show{
                 flex: 1 1 49%;
@@ -817,9 +873,9 @@ section[class*='section-']{
     h4{
         font-size: 2.2rem;
     }
-    .link-line{
-        background: linear-gradient(transparent 80%, var(--color-neon-yellow) 40%); // 형광펜 효과
-    }
+    // .link-line{
+    //     background: linear-gradient(transparent 80%, var(--color-neon-yellow) 40%); // 형광펜 효과
+    // }
     .inner{
         padding: 0 2rem;
     }
@@ -997,7 +1053,7 @@ section[class*='section-']{
             }
             &.left{
                 &::before,&::after{
-                    border-radius: 0 var(--border-radius) 0 0;
+                    border-radius: 0 var(--border-radius-4) 0 0;
                     width: 3rem;
                     height: 3rem;
                     z-index: 6;
@@ -1102,6 +1158,37 @@ section[class*='section-']{
             pointer-events: none;
         }
     }
+    .section-sideProjects{
+        .section-title+p{
+            margin-bottom: 6rem;
+        }
+        .scroll{
+            max-height: 30rem;
+        }
+        .slideProject{
+            &-item{
+                position: relative;
+                flex-direction: column;
+            }
+            &-img{
+                margin-top: 20rem;
+            }
+            &-title{
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100%;
+            }
+            &-text{
+                font-size: 1.5rem;
+                h4+p {
+                    padding: 2rem 0;
+                }
+            }
+            
+        }
+    }
     .content:has(.sub-page) {
         padding: 3rem 0;
     }
@@ -1131,7 +1218,6 @@ section[class*='section-']{
             }
         }
     }
-    
 }
 @media (max-width: 600px){
     .box-wrap .box.img-wrap{
