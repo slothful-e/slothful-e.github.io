@@ -687,6 +687,9 @@ section[class*='section-']{
         }
     }
 }
+.section-about{
+    background-color: var(--color-gray-100);
+}
 .section-about,.section-sideProjects{
     .section-title+p{
         margin-bottom: 100px;

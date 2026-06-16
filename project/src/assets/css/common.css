@@ -837,6 +837,10 @@ section[class*=section-] .section-title {
   margin-top: 30px;
 }
 
+.section-about {
+  background-color: var(--color-gray-100);
+}
+
 .section-about .section-title + p, .section-sideProjects .section-title + p {
   margin-bottom: 100px;
   text-align: center;
