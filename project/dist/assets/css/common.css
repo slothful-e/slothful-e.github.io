@@ -1528,7 +1528,7 @@ body:has(.sub-page) .header .nav-box, body:has(.sub-page) .header .menu-btn {
     right: 2.3rem;
   }
   .section-sideProjects .scroll {
-    width: 98%;
+    width: 90%;
   }
   .section-sideProjects .scroll iframe {
     width: 100% !important;
