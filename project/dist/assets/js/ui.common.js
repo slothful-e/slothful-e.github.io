@@ -4,8 +4,9 @@
         initRollingList();
         initScrollSpy();
         initHeaderFixed();
-        initMobileMenu();
+        initHeaderMenu();
         initSwiper();
+        initKeyword();
     };
 
     /* -----------------------------------------------------
@@ -13,50 +14,112 @@
      * ----------------------------------------------------- */
     const initRollingList = () => {
         const list = document.querySelector(".rolling-list");
-        const liHeight = 88;
-
         if (!list) return;
-
-        setInterval(() => {
-            const items = list.querySelectorAll("li");
-            if (items.length < 5) return;
-
-            const firstItem = items[0];
-            const middleItems = Array.from(items).slice(1, 4);
-            const lastItem = items[4];
-
+    
+        const liHeight = list.querySelector("li").offsetHeight + 5;
+    
+        let isAnimating = false;
+    
+        const roll = () => {
+            if (isAnimating) return;
+            isAnimating = true;
+    
+            const items = Array.from(list.querySelectorAll("li"));
+    
+            const first = items[0];
+            const visible = items.slice(0, 5); // 🔥 항상 4개
+    
             // 초기화
-            items.forEach(item => item.classList.remove("out", "active", "in"));
-
-            // 클래스 부여
-            firstItem.classList.add("out");
-            middleItems.forEach(item => item.classList.add("active"));
-            lastItem.classList.add("in");
-
-            // 위로 이동
-            items.forEach(item => {
-                item.style.transform = `translateY(-${liHeight}px)`;
-            });
-
-            // 재배치
-            setTimeout(() => {
-                items.forEach(item => {
-                    item.style.transition = "none";
-                    item.style.transform = "";
-                });
-
-                list.appendChild(firstItem);
-
-                // 리플로우 후 transition 다시 활성화
-                void list.offsetWidth;
-
-                items.forEach(item => {
-                    item.style.transition =
-                        "transform 0.85s ease, opacity 1.5s ease, filter 1.5s ease";
-                });
-            }, 850);
-        }, 2500);
+            items.forEach(el => el.classList.remove("active", "in", "out"));
+    
+            // 👉 핵심: 4개 무조건 active
+            visible.forEach(el => el.classList.add("active"));
+    
+            // 👉 첫 번째만 out
+            first.classList.add("out");
+    
+            // 👉 4번째만 in (하지만 active 유지)
+            visible[4].classList.add("in");
+    
+            // 이동
+            list.style.transition = "transform 0.5s ease";
+            list.style.transform = `translateY(-${liHeight}px)`;
+    
+            list.addEventListener("transitionend", function handler() {
+                list.removeEventListener("transitionend", handler);
+    
+                list.appendChild(first);
+    
+                list.style.transition = "none";
+                list.style.transform = "translateY(0)";
+    
+                list.offsetHeight;
+    
+                isAnimating = false;
+            }, { once: true });
+        };
+    
+        // 초기 세팅 (🔥 중요)
+        const items = list.querySelectorAll("li");
+    
+        items.forEach((el, i) => {
+            if (i < 4) el.classList.add("active");
+        });
+    
+        items[3].classList.add("in");
+    
+        list.style.transition = "none";
+        list.style.transform = "translateY(0)";
+    
+        setInterval(roll, 2500);
     };
+    
+    // const initRollingList = () => {
+    //     const list = document.querySelector(".rolling-list");
+    //     const liHeight = 88;
+
+    //     if (!list) return;
+
+    //     setInterval(() => {
+    //         const items = list.querySelectorAll("li");
+    //         if (items.length < 5) return;
+
+    //         const firstItem = items[0];
+    //         const middleItems = Array.from(items).slice(1, 4);
+    //         const lastItem = items[4];
+
+    //         // 초기화
+    //         items.forEach(item => item.classList.remove("out", "active", "in"));
+
+    //         // 클래스 부여
+    //         firstItem.classList.add("out");
+    //         middleItems.forEach(item => item.classList.add("active"));
+    //         lastItem.classList.add("in");
+
+    //         // 위로 이동
+    //         items.forEach(item => {
+    //             item.style.transform = `translateY(-${liHeight}px)`;
+    //         });
+
+    //         // 재배치
+    //         setTimeout(() => {
+    //             items.forEach(item => {
+    //                 item.style.transition = "none";
+    //                 item.style.transform = "";
+    //             });
+
+    //             list.appendChild(firstItem);
+
+    //             // 리플로우 후 transition 다시 활성화
+    //             void list.offsetWidth;
+
+    //             items.forEach(item => {
+    //                 item.style.transition =
+    //                     "transform 0.85s ease, opacity 1.5s ease, filter 1.5s ease";
+    //             });
+    //         }, 850);
+    //     }, 2500);
+    // };
 
     /* -----------------------------------------------------
      * Smooth Scroll + Scroll Spy
@@ -139,9 +202,9 @@
     /* -----------------------------------------------------
     * Mobile Menu Toggle
     * ----------------------------------------------------- */
-    const initMobileMenu = () => {
-        const btn = document.querySelector(".mobile-menu-btn");
-        const nav = document.querySelector("header .nav-box");
+    const initHeaderMenu = () => {
+        const btn = document.querySelector(".menu-btn");
+        const nav = document.querySelector(".header");
 
         if (!btn || !nav) return;
 
@@ -166,7 +229,7 @@
     
         new Swiper(".mySwiper", {
             slidesPerView: 1,
-            spaceBetween: 30,
+            // spaceBetween: 0,
             loop: true,
         
             pagination: {
@@ -178,6 +241,40 @@
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
+        });
+    };
+
+    const initKeyword = () => {
+        console.log('initKeyword start');
+        const section = document.querySelector('.section-keyword');
+        const leftText = section.querySelector('.keyword-left');
+        const rightText = section.querySelector('.keyword-right');
+    
+        if (!section || !leftText || !rightText) {
+            console.log('keyword element not found');
+            return;
+        }
+    
+        console.log('keyword init');
+    
+        window.addEventListener('scroll', () => {
+            console.log('scroll');
+    
+            const rect = section.getBoundingClientRect();
+            const progress = Math.max(
+                0,
+                Math.min(
+                    1,
+                    (window.innerHeight - rect.top) /
+                    (window.innerHeight + rect.height)
+                )
+            );
+    
+            leftText.style.transform =
+                `translateX(${(-500 + progress * 1000)}px)`;
+    
+            rightText.style.transform =
+                `translateX(${(500 - progress * 1000)}px)`;
         });
     };
 

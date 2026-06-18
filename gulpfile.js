@@ -136,19 +136,18 @@ function fonts(){
 // ---------------- watch ----------------
 // 지정한 파일, 경로에 대해 실시간 파일 변경 감지
 function watcher(){
-	watch('./project/src/**/*.html', html);
-	watch(paths.pdf, pdf);
-	watch('./project/src/assets/scss/**/*.scss', styles);
-	watch(paths.js, scripts);
-	watch(paths.images, images);
+  watch('./project/src/assets/scss/**/*.scss', styles);
+  watch('./project/src/**/*.html', html);
+  watch(paths.pdf, pdf);
+  watch(paths.js, scripts);
+  watch(paths.images, images);
 }
 
 // ---------------- tasks ----------------
 // 기본 task liveserver용으로
 exports.default = series(
-	parallel(serverStart, liveServer),
-	parallel(html, pdf, styles, scripts, images, fonts),
-	watcher
+  parallel(html, pdf, styles, scripts, images, fonts),
+  parallel(watcher, serverStart, liveServer)
 );
 // 전체 빌드 task
 exports.build = series(clean, parallel (html, pdf, styles, scripts, images, fonts));
