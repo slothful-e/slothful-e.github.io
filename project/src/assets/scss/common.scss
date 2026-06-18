@@ -1439,6 +1439,9 @@ section[class*='section-']{
                 }
             }
         }
+        .nav-box nav a::before{
+            bottom: -5px;
+        } 
     }
     .hero .shadow-text {
         font-size: 4.5rem;

@@ -1456,6 +1456,9 @@ section[class*=section-] .section-title .sub-title {
     bottom: 20px;
     right: 2rem;
   }
+  header .nav-box nav a::before {
+    bottom: -5px;
+  }
   .hero .shadow-text {
     font-size: 4.5rem;
   }
