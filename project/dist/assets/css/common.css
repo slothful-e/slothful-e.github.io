@@ -1516,10 +1516,10 @@ section[class*=section-] .section-title .sub-title {
     right: 2.4rem;
   }
   .section-sideProjects .scroll {
-    width: 96%;
+    width: 80%;
     margin-left: 5px;
   }
   .section-sideProjects .scroll iframe {
-    width: 280px !important;
+    width: 100% !important;
   }
 }
