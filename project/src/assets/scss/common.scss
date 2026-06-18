@@ -274,6 +274,8 @@ footer{
     text-align: center;
 }
 .content{
+    width: 100vw;
+    overflow: hidden;
     padding: 120px 0 80px;
 }
 .box-wrap{
@@ -1316,9 +1318,9 @@ section[class*='section-']{
         }
     }
     .section-keyword{
-        padding: 10rem 0 !important;
+        padding: 8rem 0 !important;
         .keyword {
-            font-size: 5rem;
+            font-size: 4.5rem;
         }
     }
     .section-works{
@@ -1439,7 +1441,7 @@ section[class*='section-']{
         }
     }
     .hero .shadow-text {
-        // font-size: 4rem;
+        font-size: 4.5rem;
     }
     .section-skills{
         margin-top: 0.6rem;
@@ -1463,7 +1465,7 @@ section[class*='section-']{
         }
         .projects{
             .memo {
-                width: 3rem;
+                width: 4rem;
                 span {
                     right: 4.6rem;
                     font-size: 2.6rem;
@@ -1509,6 +1511,18 @@ section[class*='section-']{
                 p span{
                     display: none;
                 }
+            }
+            &-img{
+                .radius-after,.radius-before{
+                    right: 2.4rem;
+                }
+            }
+        }
+        .scroll{
+            width: 96%;
+            margin-left: 5px;
+            iframe{
+                width: 100% !important;
             }
         }
         

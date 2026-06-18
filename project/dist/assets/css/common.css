@@ -402,6 +402,8 @@ footer {
 }
 
 .content {
+  width: 100vw;
+  overflow: hidden;
   padding: 120px 0 80px;
 }
 
@@ -1349,10 +1351,10 @@ section[class*=section-] .section-title .sub-title {
     padding: 1.6rem 2rem;
   }
   .section-keyword {
-    padding: 10rem 0 !important;
+    padding: 8rem 0 !important;
   }
   .section-keyword .keyword {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
   .section-works .projects .memo {
     width: 11rem;
@@ -1450,6 +1452,9 @@ section[class*=section-] .section-title .sub-title {
     bottom: 20px;
     right: 2rem;
   }
+  .hero .shadow-text {
+    font-size: 4.5rem;
+  }
   .section-skills {
     margin-top: 0.6rem;
   }
@@ -1466,7 +1471,7 @@ section[class*=section-] .section-title .sub-title {
     flex-basis: 100%;
   }
   .section-works .projects .memo {
-    width: 3rem;
+    width: 4rem;
   }
   .section-works .projects .memo span {
     right: 4.6rem;
@@ -1502,5 +1507,15 @@ section[class*=section-] .section-title .sub-title {
   }
   .section-sideProjects .slideProject-text .slideProject-title p span {
     display: none;
+  }
+  .section-sideProjects .slideProject-img .radius-after, .section-sideProjects .slideProject-img .radius-before {
+    right: 2.4rem;
+  }
+  .section-sideProjects .scroll {
+    width: 96%;
+    margin-left: 5px;
+  }
+  .section-sideProjects .scroll iframe {
+    width: 100% !important;
   }
 }
