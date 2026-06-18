@@ -932,16 +932,25 @@ section[class*='section-']{
     }
 }
 //sub-page
+body:has(.sub-page){
+    .header{
+        position: static;
+        .header-content{
+            box-shadow: unset;
+        }
+        .nav-box,.menu-btn{
+            display: none;
+        }
+    }
+}
 .sub-page{
     .inner{
         max-width: 1200px;
     }
     h2{
-        margin: 60px 0 20px;
-        font-size: 50px;
+        margin: 60px 0 20px
     }
     h3{
-        font-size: 34px;
         flex-basis: 100%;
         padding: 0;
     }
@@ -986,10 +995,6 @@ section[class*='section-']{
         }
     }
 }
-.mo-show{
-    display: none !important;
-}
-
 /*  pc만 hover 적용 */
 @media (hover: hover) and (pointer: fine) {
     .btn-lg,.btn-md{
@@ -1032,7 +1037,6 @@ section[class*='section-']{
         color: var(--color-gray-900);
     }
 }
-
 @media (max-width: 1540px){
     .hero{
         .shadow-text{

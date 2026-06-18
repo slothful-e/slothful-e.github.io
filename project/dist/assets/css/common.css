@@ -70,10 +70,13 @@ html {
 }
 
 body {
-  background-color: var(--color-black);
   font: var(--font-family);
   color: #333;
   -webkit-text-size-adjust: none;
+}
+
+body:not(:has(.sub-page)) {
+  background-color: var(--color-black);
 }
 
 img, svg {
@@ -1025,15 +1028,23 @@ section[class*=section-] .section-title .sub-title {
   padding-top: 40px;
 }
 
+body:has(.sub-page) .header {
+  position: static;
+}
+body:has(.sub-page) .header .header-content {
+  box-shadow: unset;
+}
+body:has(.sub-page) .header .nav-box, body:has(.sub-page) .header .menu-btn {
+  display: none;
+}
+
 .sub-page .inner {
   max-width: 1200px;
 }
 .sub-page h2 {
   margin: 60px 0 20px;
-  font-size: 50px;
 }
 .sub-page h3 {
-  font-size: 34px;
   flex-basis: 100%;
   padding: 0;
 }
@@ -1070,10 +1081,6 @@ section[class*=section-] .section-title .sub-title {
 }
 .sub-page .project-type ul {
   margin-top: 10px;
-}
-
-.mo-show {
-  display: none !important;
 }
 
 /*  pc만 hover 적용 */

@@ -68,10 +68,12 @@ html {
     font: var(--font-family);
 }
 body {
-    background-color: var(--color-black);
 	font: var(--font-family);
 	color: #333;
 	-webkit-text-size-adjust: none;
+}
+body:not(:has(.sub-page)){
+    background-color: var(--color-black);
 }
 img, svg {
     display: block;
