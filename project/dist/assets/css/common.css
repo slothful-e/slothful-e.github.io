@@ -132,6 +132,10 @@ strong {
   :root {
     --border-radius-2: 1.4rem;
   }
+  html,
+  body {
+    overflow-x: hidden;
+  }
   body {
     font-size: 1.6rem;
   }
