@@ -19,7 +19,7 @@
     &-wrap{
         display: flex;
         flex-direction: column;
-        gap: 14px;
+        gap: 6px;
         max-width: 500px;
         margin: auto;
     }
@@ -57,11 +57,32 @@
 .chip{
     display: inline-block;
     vertical-align: middle;
-    padding: 4px 16px;
+    position: relative;
+    padding: 4px 12px 4px 30px;
     border-radius: 20px;
     border: 1px solid var(--color-gray-900);
     background-color: var(--color-white);
     font-size: 18px;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: var(--color-neon-green);
+    }
+    &.pink{
+        &::before{
+            background-color: var(--color-pink);
+        }
+    }
+    &.yellow{
+        &::before{
+            background-color: var(--color-neon-yellow);
+        }
+    }
 }
 .tags{
     display: flex;
@@ -70,7 +91,8 @@
     >li{
         padding: 10px 16px;
         border-radius: 28px;
-        background-color: var(--color-neon-yellow);
+        background-color: var(--color-white);
+        border: 1px solid var(--color-gray-300);
         color: var(--color-gray-900);
         font-size: 18px;
     }
@@ -128,11 +150,6 @@ header {
         position: fixed;
         top: 0;
         width: 100%;
-        // &.fixed{
-        //     .header-content{
-        //     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        //     }
-        // }
         &-content{
             display: flex;
             align-items: center;
@@ -144,7 +161,7 @@ header {
             padding: 0 50px;
             border-radius: var(--border-radius-2);
             background-color: var(--color-white);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: -1px 3px 12px rgb(0 0 0 / 20%);
             transition: all .3s;
         }
         &.active{
@@ -160,7 +177,7 @@ header {
         display: none;
         nav{
             display: flex;
-            gap: 4px;
+            gap: 60px;
             position: absolute;
             left: 50%;
             top: 50%;
@@ -171,7 +188,6 @@ header {
             a {
                 position: relative;
                 display: inline-block;
-                padding: 2px 15px;
                 font-weight: 500;
                 font-size: 20px;
                 &:not(:first-child){
@@ -180,7 +196,6 @@ header {
                 &::before{
                     content: "";
                     position: absolute;
-                    left: 8px;
                     bottom: -10px;
                     width: 0;
                     height: 4px;
@@ -191,7 +206,7 @@ header {
                 &.active{
                     color: var(--color-pink);
                     &::before{
-                        width: calc(100% - 16px);
+                        width: 100%;
                         background-color: var(--color-pink);
                     }
                 }
@@ -230,14 +245,6 @@ header {
             }
             span{
                 width: 20px;
-            }
-        }
-        &:hover{
-            div{
-                background-color: var(--color-pink);
-                &::after,&::before,span{
-                    background-color: var(--color-white);
-                }
             }
         }
         &.active{
@@ -380,18 +387,18 @@ ul.dash{
         padding-top: 80px;
         span{
             font-size: inherit;
+            &:nth-child(1){
+                color: var(--color-black);
+            }
             &:nth-child(2){
-                color: var(--color-gray-600);
+                color: var(--color-gray-900);
             }
             &:nth-child(3){
+                color: var(--color-gray-600);
+            }
+            &:nth-child(4){
                 color: var(--color-gray-300);
             }
-        }
-        em{
-            display: block;
-            font-size: inherit;
-            line-height: inherit;
-            color: var(--color-black);
         }
     }
     .intro{
@@ -660,15 +667,17 @@ section[class*='section-']{
         display: flex;
         align-items: center;
         gap: 6px;
+        li{
+            flex: 1;
+        }
         .icon{
             font-size: 24px !important;
         }
     }
 }    
 .section-keyword{
-    overflow: hidden;
     .keyword {
-        font-size: 180px;
+        font-size: 110px;
         font-weight: 700;
         line-height: 1.2;
         white-space: nowrap;
@@ -702,7 +711,7 @@ section[class*='section-']{
 }
 .section-works{
     .works{
-        >li{
+        >.box{
            .date{
             margin: 20px 0 40px;
            }
@@ -713,16 +722,16 @@ section[class*='section-']{
         overflow: hidden;
         .memo{
             flex: none;
-            width: 160px;
+            width: 130px;
             background-color: var(--color-neon-yellow);
             span{
                 display: inline-block;
                 transform: rotate(270deg);
                 position: relative;
                 top: 100px;
-                right: 135px;
+                right: 150px;
                 font-size: 100px;
-                color: var(--color-gray-300);
+                color: var(--color-gray-900);
             }
         }
     }
@@ -980,25 +989,16 @@ section[class*='section-']{
 
 /*  pc만 hover 적용 */
 @media (hover: hover) and (pointer: fine) {
-    .btn{
-        &-lg{
-            &:hover {
-                background-color: var(--color-pink);
-                border-color: var(--color-pink);
-                // color: var(--color-gray-900);
-            }
-            &.move:hover {
-                background-color: #3560f8;
-                border-color: #3560f8;
-                color: var(--color-white);
-            }
+    .btn-lg,.btn-md{
+        &:hover {
+            background-color: var(--color-pink);
+            border-color: var(--color-pink);
+            // color: var(--color-gray-900);
         }
-        &-md{
-            &:hover {
-                .link-line{
-                    background: linear-gradient(transparent 87%, var(--color-neon-yellow) 40%); // 형광펜 효과
-                }
-            }
+        &.move:hover {
+            background-color: #3560f8;
+            border-color: #3560f8;
+            color: var(--color-white);
         }
     }
     header{
@@ -1008,6 +1008,16 @@ section[class*='section-']{
         .nav-box a:hover{
             color: var(--color-pink);
         }
+        .menu-btn{
+            &:hover{
+                div{
+                    background-color: var(--color-pink);
+                    &::after,&::before,span{
+                        background-color: var(--color-white);
+                    }
+                }
+            }
+        }    
     }
     .box-wrap .box.img-wrap:is(a):hover::after{
         background-color: var(--color-black);
@@ -1024,7 +1034,7 @@ section[class*='section-']{
     .hero{
         .shadow-text{
             position: relative;
-            font-size: 70px;
+            font-size: 72px;
             z-index: 10;
         }
         .box.right .rolling-wrap{
@@ -1043,15 +1053,25 @@ section[class*='section-']{
                 &:nth-child(2){
                     flex-basis: calc(40% - 12px);
                 }
+                &:nth-child(2),&:nth-child(4) {
+                    background-color: var(--color-gray-100);
+                }
             }
         }
     }
 }
 @media (max-width: 1280px){
+    header{
+        .nav-box{
+            nav{
+                gap: 3.2rem; 
+            }
+        }
+    }
     .hero{
         .shadow-text{
             height: 282px;
-            font-size: 53px;
+            font-size: 50px;
         }
     }
     .section-sideProjects{
@@ -1103,18 +1123,20 @@ section[class*='section-']{
         font-size: 2.2rem;
     }
     .btn-lg{
+        height: 5rem;
         min-width: auto;
-        padding: 0 2rem;
+        padding: 0 1.2rem;
+        font-size: 1.6rem;
     }
     .btn-md{
-        height: 4rem;
+        height: 4.2rem;
         border-radius: 8px;
-        font-size: 18px;
+        font-size: 1.6rem;
     }
     .box-wrap{
         .box{
             &:not(:has(.inbox)),.inbox{
-                padding: 2rem;
+                padding: 1.6rem;
             }
         }
     }    
@@ -1122,18 +1144,23 @@ section[class*='section-']{
         padding: 8px 1rem;
         font-size: 1.4rem;
     }
+    .inner {
+        max-width: 100vw;
+        padding: 0 1.6rem;
+    }
     header{
         .header-content{
-            min-height: 6rem;
+            min-height: 8rem;
             min-width: 30rem;
             width: 60%;
-            padding: 0 2rem;
+            padding: 0 1.6rem;
+            margin-top: 1.6rem;
         }
         .menu-btn{
             div {
                 gap: 5px;
-                width: 4rem;
-                height: 4rem;
+                width: 5rem;
+                height: 5rem;
                 span, &::after, &::before{
                     width: 2.4rem;
                     height: 3px;
@@ -1154,12 +1181,20 @@ section[class*='section-']{
                 }
             }
         }
-        .nav-box .move {
-            right: 6.6rem;
+        .nav-logo .name{
+            font-size: 3.2rem;
+        }
+        .nav-box{
+            nav{
+                gap: 1.4rem; 
+            }
+            .move {
+                right: 7.2rem;
+            }
         }
     }
     .content {
-        padding: 8.4rem 0 0;
+        padding: 9.6rem 0 0;
     }
     .hero{
         height: auto;
@@ -1177,7 +1212,7 @@ section[class*='section-']{
         .box {
             position: relative;
             height: auto;
-            padding: 0 2rem !important;
+            padding: 0 1.6rem !important;
             &::after, &::before{
                 width: 7rem;
                 height: 16rem;
@@ -1190,7 +1225,7 @@ section[class*='section-']{
                     height: 4.4rem;
                 }
                 &::after{
-                    right: 15.9rem;
+                    right: 16rem;
                     bottom: 0;
                     width: 4.2rem;
                     height: 20rem;
@@ -1201,8 +1236,8 @@ section[class*='section-']{
                     display: none;
                 }
                 .rolling-wrap{
-                    height: 39.5rem;
-                    padding: 3rem 0;
+                    height: 37rem;
+                    padding: 1.6rem 0;
                 }
                 .rolling-list li {
                     height: 8rem;
@@ -1213,11 +1248,17 @@ section[class*='section-']{
         .circle-wrap{
             left: auto;
             transform: none;
-            top: 24.2rem;
+            top: 24.1rem;
             bottom: auto;
             right: 0;
             &::before{
                 display: none;
+            }
+            &:after{
+                top: -4rem;
+                left: -4rem;
+                width: 8rem;
+                height: 8rem;
             }
         }
         .summary {
@@ -1258,11 +1299,10 @@ section[class*='section-']{
                     }
                 }
                 .icon {
-                    margin-right: .2rem;
                     font-size: 2rem;
                 }
                 .point{
-                    padding: 2rem 2rem;
+                    padding: 1.6rem 2rem;
                 }   
             }
         }
@@ -1270,7 +1310,7 @@ section[class*='section-']{
     .section-keyword{
         padding: 10rem 0 !important;
         .keyword {
-            font-size: 10rem;
+            font-size: 5rem;
         }
     }
     .section-works{
@@ -1307,9 +1347,9 @@ section[class*='section-']{
             margin: 1rem 0 2rem;
         }
         .scroll {
-            width: calc(100% + 2rem);
+            width: calc(100% + 1.4rem);
             max-height: 60rem;
-            padding-right: 5px;
+            padding-right: 0;
         }
     }
     .section-aboutMe{
@@ -1370,7 +1410,7 @@ section[class*='section-']{
             &.active{
                 .header-content{
                     width: calc(100% - 7rem);
-                    padding-bottom: 16rem;
+                    padding: 1.6rem 1.6rem 18rem;
                 }
                 .nav-box{
                     nav{
@@ -1391,7 +1431,7 @@ section[class*='section-']{
         }
     }
     .hero .shadow-text {
-        font-size: 4rem;
+        // font-size: 4rem;
     }
     .section-skills{
         margin-top: 0.6rem;
@@ -1415,10 +1455,10 @@ section[class*='section-']{
         }
         .projects{
             .memo {
-                width: 4rem;
+                width: 3rem;
                 span {
-                    right: 9.3rem;
-                    font-size: 5rem;
+                    right: 4.6rem;
+                    font-size: 2.6rem;
                 }
             }
         }

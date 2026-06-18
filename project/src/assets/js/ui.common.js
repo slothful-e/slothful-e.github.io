@@ -249,7 +249,8 @@
         const section = document.querySelector('.section-keyword');
         const leftText = section.querySelector('.keyword-left');
         const rightText = section.querySelector('.keyword-right');
-    
+        const move = window.innerWidth * 0.3;
+        
         if (!section || !leftText || !rightText) {
             console.log('keyword element not found');
             return;
@@ -271,10 +272,10 @@
             );
     
             leftText.style.transform =
-                `translateX(${(-500 + progress * 1000)}px)`;
+                `translateX(${(-700 + progress * 1000)}px)`;
     
             rightText.style.transform =
-                `translateX(${(500 - progress * 1000)}px)`;
+                `translateX(${(700 - progress * 1000)}px)`;
         });
     };
 
