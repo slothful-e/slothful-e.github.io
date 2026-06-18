@@ -272,6 +272,9 @@ header {
 footer{
     padding: 120px 0 20px;
     text-align: center;
+    .symbol{
+        color: var(--color-white);
+    }
 }
 .content{
     width: 100vw;
@@ -1487,6 +1490,9 @@ section[class*='section-']{
         .slideProject{
             &-wrap{
                 max-width: calc(100% - (5rem * 2 + 1.2rem));
+            }
+            &-text{
+                padding: 0 1.6rem;
             }
         }
         .swiper{

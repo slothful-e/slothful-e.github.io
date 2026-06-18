@@ -404,6 +404,9 @@ footer {
   padding: 120px 0 20px;
   text-align: center;
 }
+footer .symbol {
+  color: var(--color-white);
+}
 
 .content {
   width: 100vw;
@@ -1491,6 +1494,9 @@ section[class*=section-] .section-title .sub-title {
   }
   .section-sideProjects .slideProject-wrap {
     max-width: calc(100% - 11.2rem);
+  }
+  .section-sideProjects .slideProject-text {
+    padding: 0 1.6rem;
   }
   .section-sideProjects .swiper {
     padding-bottom: 6.6rem;
