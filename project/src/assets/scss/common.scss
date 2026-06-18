@@ -747,9 +747,7 @@ section[class*='section-']{
     .scroll{
         max-width: 1480px;
         max-height: 800px;
-        width: calc(100% + 35px);
         margin: auto;
-        padding-right: 15px;
         &::-webkit-scrollbar-thumb{
             border: 6px solid var(--color-white);
         }
@@ -1357,9 +1355,7 @@ section[class*='section-']{
             margin: 1rem 0 2rem;
         }
         .scroll {
-            width: calc(100% + 1.4rem);
             max-height: 60rem;
-            padding-right: 0;
         }
     }
     .section-aboutMe{
