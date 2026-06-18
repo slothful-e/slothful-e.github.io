@@ -1513,10 +1513,10 @@ section[class*=section-] .section-title .sub-title {
     display: none;
   }
   .section-sideProjects .slideProject-img .radius-after, .section-sideProjects .slideProject-img .radius-before {
-    right: 2.4rem;
+    right: 1.7rem;
   }
   .section-sideProjects .scroll {
-    width: 80%;
+    width: 98%;
     margin-left: 5px;
   }
   .section-sideProjects .scroll iframe {
