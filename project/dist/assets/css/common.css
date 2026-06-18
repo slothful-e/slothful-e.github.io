@@ -1194,6 +1194,14 @@ section[class*=section-] .section-title .sub-title {
   .box-wrap .box:not(:has(.inbox)), .box-wrap .box .inbox {
     padding: 1.6rem;
   }
+  .chip {
+    padding: 4px 8px 4px 2.6rem;
+    font-size: 1.4rem;
+  }
+  .chip::before {
+    top: 7px;
+    left: 7px;
+  }
   .tags > li {
     padding: 8px 1rem;
     font-size: 1.4rem;
