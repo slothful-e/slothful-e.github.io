@@ -58,6 +58,10 @@
   word-break: keep-all;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 html {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -131,10 +135,6 @@ strong {
 @media (max-width: 1024px) {
   :root {
     --border-radius-2: 1.4rem;
-  }
-  html,
-  body {
-    overflow-x: hidden;
   }
   body {
     font-size: 1.6rem;
@@ -1520,6 +1520,6 @@ section[class*=section-] .section-title .sub-title {
     margin-left: 5px;
   }
   .section-sideProjects .scroll iframe {
-    width: 100% !important;
+    width: 300px !important;
   }
 }

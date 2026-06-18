@@ -58,6 +58,9 @@
     padding: 0;
     word-break: keep-all;
 }
+html,body {
+        overflow-x: hidden;
+    }
 html {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -123,10 +126,6 @@ strong{
 @media (max-width: 1024px){
     :root {
         --border-radius-2: 1.4rem;
-    }
-    html,
-    body {
-        overflow-x: hidden;
     }
     
     body {
