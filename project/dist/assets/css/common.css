@@ -1518,11 +1518,10 @@ section[class*=section-] .section-title .sub-title {
     display: none;
   }
   .section-sideProjects .slideProject-img .radius-after, .section-sideProjects .slideProject-img .radius-before {
-    right: 1.7rem;
+    right: 2.3rem;
   }
   .section-sideProjects .scroll {
     width: 98%;
-    margin-left: 5px;
   }
   .section-sideProjects .scroll iframe {
     width: 100% !important;
