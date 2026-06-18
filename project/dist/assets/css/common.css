@@ -1220,7 +1220,7 @@ section[class*=section-] .section-title .sub-title {
     min-height: 8rem;
     min-width: 30rem;
     width: 60%;
-    padding: 0 1.6rem;
+    padding: 1.6rem;
     margin-top: 1.6rem;
   }
   header .menu-btn div {
