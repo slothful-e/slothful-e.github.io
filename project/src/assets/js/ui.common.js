@@ -256,8 +256,6 @@
             return;
         }
     
-        console.log('keyword init');
-    
         window.addEventListener('scroll', () => {
             console.log('scroll');
     
@@ -266,16 +264,16 @@
                 0,
                 Math.min(
                     1,
-                    (window.innerHeight - rect.top) /
+                    (window.innerHeight + 300 - rect.top) /
                     (window.innerHeight + rect.height)
                 )
             );
     
             leftText.style.transform =
-                `translateX(${(-700 + progress * 1000)}px)`;
-    
+                `translateX(${(-move + progress * move * 2)}px)`;
+
             rightText.style.transform =
-                `translateX(${(700 - progress * 1000)}px)`;
+                `translateX(${(move - progress * move * 2)}px)`;
         });
     };
 
