@@ -528,16 +528,16 @@ ul.dash li:not(:first-child) {
   font-size: inherit;
 }
 .hero .shadow-text span:nth-child(1) {
-  color: var(--color-black);
+  color: var(--color-gray-300);
 }
 .hero .shadow-text span:nth-child(2) {
-  color: var(--color-gray-900);
-}
-.hero .shadow-text span:nth-child(3) {
   color: var(--color-gray-600);
 }
+.hero .shadow-text span:nth-child(3) {
+  color: var(--color-gray-900);
+}
 .hero .shadow-text span:nth-child(4) {
-  color: var(--color-gray-300);
+  color: var(--color-black);
 }
 .hero .intro {
   padding-bottom: 50px;
@@ -808,7 +808,7 @@ section[class*=section-] .section-title .sub-title {
   font-size: 24px !important;
 }
 
-.section-keyword .keyword {
+.section-keyword .keyword, .section-keyword .keyword span {
   font-size: 130px;
   font-weight: 700;
   line-height: 1.2;
@@ -1142,7 +1142,7 @@ body:has(.sub-page) .header .nav-box, body:has(.sub-page) .header .menu-btn {
   .section-skills .skills .box:nth-child(2), .section-skills .skills .box:nth-child(4) {
     background-color: var(--color-gray-100);
   }
-  .section-keyword .keyword {
+  .section-keyword .keyword, .section-keyword .keyword span {
     font-size: 87px;
   }
 }
@@ -1369,8 +1369,8 @@ body:has(.sub-page) .header .nav-box, body:has(.sub-page) .header .menu-btn {
   .section-keyword {
     padding: 8rem 0 !important;
   }
-  .section-keyword .keyword {
-    font-size: 4.5rem;
+  .section-keyword .keyword, .section-keyword .keyword span {
+    font-size: 6.5rem;
   }
   .section-works .projects .memo {
     width: 11rem;
@@ -1480,6 +1480,12 @@ body:has(.sub-page) .header .nav-box, body:has(.sub-page) .header .menu-btn {
   }
   .section-skills .skills .box:nth-child(2) .tags {
     margin-top: 2rem;
+  }
+  .section-keyword .keyword {
+    font-size: 5rem;
+  }
+  .section-keyword .keyword span {
+    display: none;
   }
   .section-works .works {
     flex-wrap: wrap;
