@@ -1511,9 +1511,19 @@ body:has(.sub-page){
     .section-sideProjects{
         .slideProject{
             &-wrap{
-                max-width: calc(100% - (5rem * 2 + 1.2rem));
+                // max-width: calc(100% - (5rem * 2 + 1.2rem));
+                max-width: 100%;
+                padding: 2rem 5px;
             }
             &-text{
+                padding: 0 1.6rem;
+                .slideProject-title{
+                    p span{
+                        display: none;
+                    }
+                }    
+            }
+            &-img{
                 padding: 0 1.6rem;
             }
         }
@@ -1529,22 +1539,22 @@ body:has(.sub-page){
                 }
             }
         }
-        .slideProject{
-            &-wrap{
-                padding: 2rem 5px;
-                max-width: 100%;
-            }
-            &-text .slideProject-title{
-                p span{
-                    display: none;
-                }
-            }
-            // &-img{
-            //     .radius-after,.radius-before{
-            //         right: 2.3rem;
-            //     }
-            // }
-        }
+        // .slideProject{
+        //     &-wrap{
+        //         padding: 2rem 5px;
+        //         max-width: 100%;
+        //     }
+        //     &-text .slideProject-title{
+        //         p span{
+        //             display: none;
+        //         }
+        //     }
+        //     // &-img{
+        //     //     .radius-after,.radius-before{
+        //     //         right: 2.3rem;
+        //     //     }
+        //     // }
+        // }
         // .scroll{
         //     width: 90%;
         //     iframe{

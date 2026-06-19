@@ -1508,9 +1508,16 @@ body:has(.sub-page) .header .nav-box, body:has(.sub-page) .header .menu-btn {
     flex-basis: 100%;
   }
   .section-sideProjects .slideProject-wrap {
-    max-width: calc(100% - 11.2rem);
+    max-width: 100%;
+    padding: 2rem 5px;
   }
   .section-sideProjects .slideProject-text {
+    padding: 0 1.6rem;
+  }
+  .section-sideProjects .slideProject-text .slideProject-title p span {
+    display: none;
+  }
+  .section-sideProjects .slideProject-img {
     padding: 0 1.6rem;
   }
   .section-sideProjects .swiper {
@@ -1524,12 +1531,5 @@ body:has(.sub-page) .header .nav-box, body:has(.sub-page) .header .menu-btn {
   }
   .section-sideProjects .swiper-button > div::after {
     font-size: 4rem;
-  }
-  .section-sideProjects .slideProject-wrap {
-    padding: 2rem 5px;
-    max-width: 100%;
-  }
-  .section-sideProjects .slideProject-text .slideProject-title p span {
-    display: none;
   }
 }
