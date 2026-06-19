@@ -130,14 +130,12 @@ strong {
     font-size: 18px;
   }
 }
-@media (max-width: 1280px) {
-  html {
-    font-size: 62.5%;
-  }
-}
 @media (max-width: 1024px) {
   :root {
     --border-radius-2: 1.4rem;
+  }
+  html {
+    font-size: 62.5%;
   }
   body {
     font-size: 1.6rem;
@@ -772,6 +770,9 @@ section[class*=section-] .section-title .sub-title {
   flex-direction: column;
   flex-basis: 200px;
 }
+.section-skills .skills .box:nth-child(2) .tags {
+  margin-top: 20px;
+}
 .section-skills .skills .box .think {
   flex-grow: 1;
 }
@@ -1148,38 +1149,38 @@ body:has(.sub-page) .header .nav-box, body:has(.sub-page) .header .menu-btn {
 }
 @media (max-width: 1280px) {
   header .nav-box nav {
-    gap: 3.2rem;
+    gap: 32px;
   }
   .hero .shadow-text {
     height: 282px;
     font-size: 50px;
   }
   .section-sideProjects .scroll {
-    max-height: 44rem;
+    max-height: 440px;
   }
   .section-sideProjects .slideProject {
     flex-direction: column;
     position: relative;
     width: 100%;
     overflow: auto;
-    max-height: 60rem;
+    max-height: 600px;
   }
   .section-sideProjects .slideProject-img {
-    max-width: 35.2rem;
-    margin-top: 20rem;
+    max-width: 352px;
+    margin-top: 200px;
     left: 50%;
     transform: translateX(-50%);
   }
   .section-sideProjects .slideProject-text .slideProject-title {
     position: absolute;
     top: 0;
-    margin-right: 2rem;
+    margin-right: 20px;
   }
   .section-sideProjects .slideProject-wrap {
-    max-width: calc(100% - 21.2rem);
+    max-width: calc(100% - 212px);
   }
   .section-sideProjects .swiper-button {
-    width: 10rem;
+    width: 100px;
   }
 }
 @media (max-width: 1024px) {
@@ -1478,9 +1479,6 @@ body:has(.sub-page) .header .nav-box, body:has(.sub-page) .header .menu-btn {
   .section-skills .skills .box:nth-child(2) {
     flex-basis: 50% !important;
   }
-  .section-skills .skills .box:nth-child(2) .tags {
-    margin-top: 2rem;
-  }
   .section-keyword .keyword {
     font-size: 5rem;
   }
@@ -1533,14 +1531,5 @@ body:has(.sub-page) .header .nav-box, body:has(.sub-page) .header .menu-btn {
   }
   .section-sideProjects .slideProject-text .slideProject-title p span {
     display: none;
-  }
-  .section-sideProjects .slideProject-img .radius-after, .section-sideProjects .slideProject-img .radius-before {
-    right: 2.3rem;
-  }
-  .section-sideProjects .scroll {
-    width: 90%;
-  }
-  .section-sideProjects .scroll iframe {
-    width: 100% !important;
   }
 }

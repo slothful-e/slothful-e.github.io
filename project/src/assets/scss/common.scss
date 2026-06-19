@@ -642,6 +642,11 @@ section[class*='section-']{
                 flex-direction: column;
                 flex-basis: 200px;
             }
+            &:nth-child(2){
+                .tags{
+                    margin-top: 20px;
+                }
+            }
             .think{
                 flex-grow: 1;
                 .sub{
@@ -1076,7 +1081,7 @@ body:has(.sub-page){
     header{
         .nav-box{
             nav{
-                gap: 3.2rem; 
+                gap: 32px; 
             }
         }
     }
@@ -1088,17 +1093,17 @@ body:has(.sub-page){
     }
     .section-sideProjects{
         .scroll{
-            max-height: 44rem;
+            max-height: 440px;
         }
         .slideProject{
             flex-direction: column;
             position: relative;
             width: 100%;
             overflow: auto;
-            max-height: 60rem;
+            max-height: 600px;
             &-img{
-                max-width: 35.2rem;
-                margin-top: 20rem;
+                max-width: 352px;
+                margin-top: 200px;
                 left: 50%;
                 transform: translateX(-50%);
             }
@@ -1106,18 +1111,19 @@ body:has(.sub-page){
                 .slideProject-title{
                     position: absolute;
                     top: 0;
-                    margin-right: 2rem;
+                    margin-right: 20px;
                 }
             }
             &-wrap{
-                max-width: calc(100% - (10rem * 2 + 1.2rem));
+                max-width: calc(100% - (100px * 2 + 12px));
             }
         }
         .swiper-button{
-            width: 10rem;
+            width: 100px;
         }
     }
 }
+//모바일 
 @media (max-width: 1024px){
     .pc-show{
         display: none !important;
@@ -1462,9 +1468,6 @@ body:has(.sub-page){
             .box{
                 &:nth-child(2){
                     flex-basis: 50% !important;
-                    .tags{
-                        margin-top: 2rem;
-                    }
                 }    
             }
         }
@@ -1536,18 +1539,18 @@ body:has(.sub-page){
                     display: none;
                 }
             }
-            &-img{
-                .radius-after,.radius-before{
-                    right: 2.3rem;
-                }
-            }
+            // &-img{
+            //     .radius-after,.radius-before{
+            //         right: 2.3rem;
+            //     }
+            // }
         }
-        .scroll{
-            width: 90%;
-            iframe{
-                width: 100% !important;
-            }
-        }
+        // .scroll{
+        //     width: 90%;
+        //     iframe{
+        //         width: 100% !important;
+        //     }
+        // }
         
     }
 }
