@@ -520,7 +520,7 @@ ul.dash li:not(:first-child) {
   flex-direction: column;
   font-size: 85px;
   line-height: 1;
-  padding-top: 80px;
+  padding-top: 40px;
 }
 .hero .shadow-text span {
   font-size: inherit;
@@ -535,6 +535,8 @@ ul.dash li:not(:first-child) {
   color: var(--color-gray-900);
 }
 .hero .shadow-text span:nth-child(4) {
+  margin-top: 15px;
+  font-size: 20px;
   color: var(--color-black);
 }
 .hero .intro {

@@ -390,7 +390,7 @@ ul.dash{
         flex-direction: column;
         font-size: 85px;
         line-height: 1;
-        padding-top: 80px;
+        padding-top: 40px;
         span{
             font-size: inherit;
             &:nth-child(1){
@@ -403,6 +403,8 @@ ul.dash{
                 color: var(--color-gray-900);
             }
             &:nth-child(4){
+                margin-top: 15px;
+                font-size: 20px;
                 color: var(--color-black);
             }
         }
