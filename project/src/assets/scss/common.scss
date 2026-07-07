@@ -403,9 +403,13 @@ ul.dash{
                 color: var(--color-gray-900);
             }
             &:nth-child(4){
-                margin-top: 15px;
+                display: block;
+                width: calc(100% - 166px);
+                margin-top: 14px;
                 font-size: 20px;
                 color: var(--color-black);
+                line-height: 1.2;
+                word-break: keep-all;
             }
         }
     }
@@ -1048,7 +1052,7 @@ body:has(.sub-page){
     .hero{
         .shadow-text{
             position: relative;
-            font-size: 72px;
+            font-size: 78px;
             z-index: 10;
         }
         .box.right .rolling-wrap{
@@ -1090,7 +1094,7 @@ body:has(.sub-page){
     .hero{
         .shadow-text{
             height: 282px;
-            font-size: 50px;
+            font-size: 58px;
         }
     }
     .section-sideProjects{
@@ -1462,7 +1466,14 @@ body:has(.sub-page){
         } 
     }
     .hero .shadow-text {
+        padding: 7rem 0 0;
         font-size: 4.5rem;
+        span{
+            &:nth-child(4){
+                margin-top: .4rem;
+                font-size: 1.8rem;
+            }
+        }
     }
     .section-skills{
         margin-top: 0.6rem;

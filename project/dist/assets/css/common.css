@@ -535,9 +535,13 @@ ul.dash li:not(:first-child) {
   color: var(--color-gray-900);
 }
 .hero .shadow-text span:nth-child(4) {
-  margin-top: 15px;
+  display: block;
+  width: calc(100% - 166px);
+  margin-top: 14px;
   font-size: 20px;
   color: var(--color-black);
+  line-height: 1.2;
+  word-break: keep-all;
 }
 .hero .intro {
   padding-bottom: 50px;
@@ -1123,7 +1127,7 @@ body:has(.sub-page) .header .nav-box, body:has(.sub-page) .header .menu-btn {
 @media (max-width: 1540px) {
   .hero .shadow-text {
     position: relative;
-    font-size: 72px;
+    font-size: 78px;
     z-index: 10;
   }
   .hero .box.right .rolling-wrap {
@@ -1155,7 +1159,7 @@ body:has(.sub-page) .header .nav-box, body:has(.sub-page) .header .menu-btn {
   }
   .hero .shadow-text {
     height: 282px;
-    font-size: 50px;
+    font-size: 58px;
   }
   .section-sideProjects .scroll {
     max-height: 440px;
@@ -1473,7 +1477,12 @@ body:has(.sub-page) .header .nav-box, body:has(.sub-page) .header .menu-btn {
     bottom: -5px;
   }
   .hero .shadow-text {
+    padding: 7rem 0 0;
     font-size: 4.5rem;
+  }
+  .hero .shadow-text span:nth-child(4) {
+    margin-top: 0.4rem;
+    font-size: 1.8rem;
   }
   .section-skills {
     margin-top: 0.6rem;
