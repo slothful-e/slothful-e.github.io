@@ -1335,12 +1335,11 @@ body:has(.sub-page) .header .nav-box, body:has(.sub-page) .header .menu-btn {
     height: 8rem;
   }
   .hero .summary {
-    height: 4rem;
-    margin-top: 4rem;
+    height: 6rem;
+    margin-top: 2rem;
   }
   .hero .shadow-text span:nth-child(4) {
     width: calc(100% - 16.6rem);
-    margin-top: 0.6rem;
     font-size: 1.8rem;
   }
   .hero .intro {
@@ -1478,7 +1477,7 @@ body:has(.sub-page) .header .nav-box, body:has(.sub-page) .header .menu-btn {
     bottom: -5px;
   }
   .hero .shadow-text {
-    padding-top: 7rem;
+    padding-top: 5rem;
     font-size: 4.5rem;
   }
   .section-skills {
