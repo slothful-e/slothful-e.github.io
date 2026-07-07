@@ -536,7 +536,6 @@ ul.dash li:not(:first-child) {
 }
 .hero .shadow-text span:nth-child(4) {
   display: block;
-  width: calc(100% - 166px);
   margin-top: 14px;
   font-size: 20px;
   color: var(--color-black);
@@ -1339,8 +1338,10 @@ body:has(.sub-page) .header .nav-box, body:has(.sub-page) .header .menu-btn {
     height: 4rem;
     margin-top: 4rem;
   }
-  .hero .shadow-text {
-    padding: 5rem 0 2rem;
+  .hero .shadow-text span:nth-child(4) {
+    width: calc(100% - 16.6rem);
+    margin-top: 0.6rem;
+    font-size: 1.8rem;
   }
   .hero .intro {
     padding-bottom: 2rem;
@@ -1477,12 +1478,8 @@ body:has(.sub-page) .header .nav-box, body:has(.sub-page) .header .menu-btn {
     bottom: -5px;
   }
   .hero .shadow-text {
-    padding: 7rem 0 0;
+    padding-top: 7rem;
     font-size: 4.5rem;
-  }
-  .hero .shadow-text span:nth-child(4) {
-    margin-top: 0.4rem;
-    font-size: 1.8rem;
   }
   .section-skills {
     margin-top: 0.6rem;
